@@ -90,10 +90,12 @@ polygon_results = client.search_by_polygon(
 # Get detailed product information
 product = client.get_product('product-id-123')
 
-# Delta updates for incremental sync
-updates = client.get_delta_updates(
-    last_sync_date='2024-01-01',
-    categories=['ACCOMM']
+# Delta updates for incremental sync (products updated since a date)
+updates = client.get_delta(
+    since_date='2024-01-01',
+    categories=['ACCOMM'],
+    state='VIC',
+    status=['ACTIVE']
 )
 ```
 
@@ -332,6 +334,177 @@ PostGIS geography fields enable fast radius queries:
 -- Finds products within 10km in ~50ms (on 50k products)
 SELECT * FROM products
 WHERE ST_DWithin(geom, ST_MakePoint(153.6050, -28.6450)::geography, 10000);
+```
+
+## Delta Updates (Incremental Sync)
+
+The delta update functionality allows you to efficiently sync only products that have changed since a specific date/time.
+
+### How It Works
+
+- Uses `/products` endpoint with `delta` parameter
+- Returns products with `status` field: `ACTIVE` (updated), `INACTIVE` (deleted), or `EXPIRED` (past validity)
+- Supports all standard filters (state, category, etc.)
+- Fully paginated for large result sets
+- Date/time in AEST timezone
+
+### Usage Examples
+
+```python
+from datetime import datetime, timedelta
+from src.datasources.atdw_client import ATDWClient
+
+client = ATDWClient()
+
+# Get all Victorian products updated in last 30 days
+thirty_days_ago = (datetime.now() - timedelta(days=30)).strftime('%Y-%m-%d')
+updates = client.get_delta(
+    since_date=thirty_days_ago,
+    state='VIC',
+    status=['ACTIVE']  # Only active products
+)
+print(f"Found {len(updates)} updated products")
+
+# Get accommodation updates by category
+accomm_updates = client.get_delta(
+    since_date='2024-01-01',
+    categories=['ACCOMM'],
+    state='NSW',
+    status=['ACTIVE', 'INACTIVE']  # Include deleted products
+)
+
+# High-precision sync with timestamp
+recent_updates = client.get_delta(
+    since_date='2025-01-15 14:30:00',  # AEST timezone
+    state='QLD'
+)
+```
+
+### Performance
+
+Delta queries are highly efficient for incremental synchronization:
+
+**Victorian Products Updated:**
+- Last 7 days: ~715 products (0.6-2s)
+- Last 30 days: ~1,739 products (1.9s)
+- Last 90 days: ~3,433 products (3-5s)
+- Last 6 months: ~4,711 products (5-8s)
+
+### Understanding Product Changes
+
+The delta endpoint returns products with changes, but doesn't explicitly label them as "NEW" or "UPDATED". You need to compare against your database to determine the change type:
+
+| Change Type | API Status | Meaning | How to Detect |
+|-------------|------------|---------|---------------|
+| **NEW** | ACTIVE | First time appearing in ATDW | Product ID not in your database |
+| **UPDATED** | ACTIVE | Existing product modified | Product ID exists in your database |
+| **DELETED** | INACTIVE | Removed from ATDW | Status = INACTIVE |
+| **EXPIRED** | EXPIRED | Past validity date | Status = EXPIRED |
+
+**Implementation Example:**
+
+```python
+# Load existing product IDs from your database
+existing_product_ids = {row['product_id'] for row in db.query("SELECT product_id FROM products")}
+
+# Fetch delta updates
+updates = client.get_delta(since_date='2024-01-01', state='VIC')
+
+for product in updates:
+    product_id = product['productId']
+    status = product['status']
+
+    if status == 'ACTIVE':
+        # Check if product is NEW or UPDATED
+        if product_id in existing_product_ids:
+            # UPDATED: Product exists - update it
+            db.update_product(product)
+        else:
+            # NEW: Product doesn't exist - insert it
+            db.insert_product(product)
+
+    elif status == 'INACTIVE':
+        # DELETED: Product was removed from ATDW
+        # IMPORTANT: Use soft delete - update status, don't physically delete
+        db.update_product_status(product_id, status='INACTIVE', deleted_at=datetime.now())
+
+    elif status == 'EXPIRED':
+        # EXPIRED: Product past validity date
+        # Update status to expired, preserve the product data
+        db.update_product_status(product_id, status='EXPIRED', expiry_date=product.get('atdwExpiryDate'))
+```
+
+**Key Insights**:
+- The ATDW API doesn't distinguish between NEW and UPDATED products - both have `status='ACTIVE'`. You must compare against your existing data to determine if a product is truly new.
+- **Never physically delete products** - Use soft deletes (status updates) to preserve historical data, maintain referential integrity, and enable analytics on closed businesses.
+
+**Critical: INACTIVE ≠ Business Closed**
+
+INACTIVE status means the product was **removed from ATDW**, but this does NOT necessarily mean the business has closed:
+
+**Common Reasons for INACTIVE Status:**
+- Operator stopped paying for ATDW listing (especially in states where ATDW has fees)
+- Operator let their listing lapse
+- Operator temporarily suspended listing
+- Business is operational but not using ATDW
+
+**DMO Best Practice (All Australian States):**
+
+Destination Marketing Organizations (DMOs) and Regional Tourism Boards (RTBs) preserve INACTIVE listings while attempting to re-engage operators. They:
+1. Keep INACTIVE products in their databases (soft delete)
+2. Use custom product management features (like Roam) to maintain listings
+3. Attempt to convince operators to renew their ATDW listings
+4. Separately track actual business closures vs ATDW listing lapses
+
+**Recommendation**: Your database should track TWO separate statuses:
+- `atdw_status`: What ATDW reports (ACTIVE/INACTIVE/EXPIRED)
+- `operational_status`: Your own verification (OPEN/CLOSED/SEASONAL/UNKNOWN)
+
+### Best Practices
+
+1. **Store last sync timestamp** - Save the timestamp after successful sync
+2. **Use soft deletes** - Update status field instead of physically deleting records
+3. **Filter by status** - Use `status=['ACTIVE']` to skip deleted products in queries
+4. **Use state filter** - Filter at API level for better performance
+5. **Handle pagination** - Delta queries can return thousands of results
+6. **Process incrementally** - Run delta sync daily/hourly for freshness
+7. **Track first seen date** - Store your own timestamp when inserting NEW products
+
+**Database Schema Recommendation:**
+```sql
+CREATE TABLE products (
+    product_id VARCHAR PRIMARY KEY,
+    product_name VARCHAR,
+
+    -- ATDW status (what the API reports)
+    atdw_status VARCHAR DEFAULT 'ACTIVE',  -- ACTIVE, INACTIVE, EXPIRED
+    atdw_status_changed_at TIMESTAMP,
+
+    -- YOUR operational status (what you've verified)
+    operational_status VARCHAR DEFAULT 'UNKNOWN',  -- OPEN, CLOSED, SEASONAL, UNKNOWN
+    operational_status_updated_at TIMESTAMP,
+
+    -- Tracking timestamps
+    first_seen_at TIMESTAMP,
+    atdw_expiry_date DATE,  -- From atdwExpiryDate field
+
+    ...
+);
+
+-- Query for ATDW active products only
+SELECT * FROM products WHERE atdw_status = 'ACTIVE';
+
+-- Query for businesses you believe are OPEN (regardless of ATDW status)
+SELECT * FROM products
+WHERE operational_status = 'OPEN'
+  OR (atdw_status = 'ACTIVE' AND operational_status = 'UNKNOWN');
+
+-- Analytics: ATDW listing lapses (not business closures)
+SELECT COUNT(*), DATE_TRUNC('month', atdw_status_changed_at)
+FROM products
+WHERE atdw_status = 'INACTIVE'
+  AND operational_status != 'CLOSED'
+GROUP BY DATE_TRUNC('month', atdw_status_changed_at);
 ```
 
 ## Rate Limiting
