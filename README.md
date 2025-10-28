@@ -1,335 +1,125 @@
-# ATDW Client
+# ATDW API Client
 
-A TypeScript/Node.js client for the **Australian Tourism Data Warehouse (ATDW) ATLAS2 API**.
+A standalone Python client for the Australian Tourism Data Warehouse (ATDW) API.
 
-This library provides access to Australia's national tourism database with **50,000+ tourism products** including accommodation, attractions, tours, restaurants, and events.
+This client provides access to Australia's national tourism database with 50,000+ tourism products including accommodation, attractions, tours, restaurants, and events.
 
-## About
+## Overview
 
-This project was extracted from the [Fathom](https://github.com/roamhq/fathom) project and is intended for use by **[Roam](https://roamhq.io)** and other applications that need access to Australian tourism data.
-
-The original Python implementation was translated to TypeScript to provide a modern, type-safe client for Node.js and browser environments.
+This project was extracted from the Fathom project and is intended for use by [Roam](https://roamhq.io) as a standalone ATDW API client.
 
 ## Features
 
-- **Full-text search** across tourism products
-- **Geospatial search** (radius and polygon-based)
-- **Category filtering** (accommodation, attractions, tours, restaurants, events)
-- **Advanced filtering** by location, price, star rating, and more
-- **Pagination support** with automatic page fetching
-- **Product details** with multilingual support
-- **Delta updates** to fetch products updated since a specific date
-- **Rate limiting** with exponential backoff and Retry-After header support
-- **Type-safe** with full TypeScript definitions
+- Full-text search across tourism products
+- Geospatial search (radius and polygon-based)
+- Category filtering (accommodation, attractions, tours, restaurants, events)
+- Region-based search (state, city, region)
+- Product details with multilingual support
+- Delta updates for incremental synchronization
+- Automatic rate limiting and retry logic
+- Pagination support
 
 ## Installation
 
-```bash
-npm install @roamhq/atdw-client
-```
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Or with yarn:
-
-```bash
-yarn add @roamhq/atdw-client
-```
-
-Or with pnpm:
-
-```bash
-pnpm add @roamhq/atdw-client
-```
+3. Set up your ATDW API key:
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your ATDW_API_KEY
+   ```
 
 ## Quick Start
 
-```typescript
-import { createClient } from '@roamhq/atdw-client';
+```python
+from atdw import ATDWClient
 
-// Initialize the client
-const client = createClient({
-  apiKey: process.env.ATDW_API_KEY
-});
+# Initialize client (uses ATDW_API_KEY from environment)
+client = ATDWClient()
 
-// Search for accommodation in Byron Bay
-const products = await client.searchProducts({
-  term: 'Byron Bay',
-  categories: ['ACCOMM'],
-  starRating: 4
-});
+# Search for accommodation in Byron Bay
+products = client.search_products(
+    term='Byron Bay',
+    categories=['ACCOMM'],
+    star_rating=4
+)
 
-console.log(`Found ${products.length} products`);
+# Location-based search
+nearby = client.search_by_location(
+    lat=-28.6450,
+    lng=153.6050,
+    radius_km=10,
+    categories=['ATTRACTION']
+)
+
+# Get product details
+product = client.get_product('product-id-123')
 ```
 
-## API Key
+## API Categories
 
-You need an ATDW Distributor API key to use this client. You can:
-
-1. Set the `ATDW_API_KEY` environment variable
-2. Pass it directly in the client configuration
-
-```typescript
-// Option 1: Environment variable
-const client = createClient(); // Reads from process.env.ATDW_API_KEY
-
-// Option 2: Direct configuration
-const client = createClient({
-  apiKey: 'your-api-key-here'
-});
-```
-
-## Usage Examples
-
-### Basic Product Search
-
-```typescript
-// Search for products by term
-const results = await client.searchProducts({
-  term: 'beach resort',
-  categories: ['ACCOMM']
-});
-```
-
-### Geospatial Search
-
-```typescript
-// Find attractions within 10km of a location
-const nearby = await client.searchByLocation(
-  -28.6450,  // latitude
-  153.6050,  // longitude
-  10,        // radius in km
-  ['ATTRACTION', 'TOUR']
-);
-```
-
-### Region-Based Search
-
-```typescript
-// Search by state and city
-const nswProducts = await client.searchByRegion({
-  state: 'NSW',
-  city: 'Byron Bay',
-  categories: ['RESTAURANT']
-});
-```
-
-### Advanced Filtering
-
-```typescript
-// Combine multiple filters
-const filtered = await client.searchProducts({
-  state: 'VIC',
-  categories: ['ACCOMM'],
-  minRate: 100,
-  maxRate: 300,
-  starRating: 4,
-  paginate: true,      // Fetch all pages (default: true)
-  pageSize: 1000       // Results per page (default: 1000, max: 5000)
-});
-```
-
-### Get Product Details
-
-```typescript
-// Get detailed information for a specific product
-const product = await client.getProduct('56b23538eac3c50eec5e9bd0');
-
-console.log(product.productName);
-console.log(product.productDescription);
-```
-
-### Delta Updates
-
-```typescript
-// Get products updated since a specific date
-const updated = await client.getDelta('2025-10-01', ['ACCOMM']);
-
-console.log(`${updated.length} products updated since Oct 1`);
-```
-
-### Pagination Control
-
-```typescript
-// Fetch only the first page
-const firstPage = await client.searchProducts({
-  term: 'Sydney',
-  paginate: false  // Only fetch first page
-});
-
-// Limit number of pages
-const limited = await client.searchProducts({
-  term: 'Melbourne',
-  maxPages: 3  // Fetch only first 3 pages
-});
-```
-
-## API Reference
-
-### Product Categories
-
-The client provides constants for product categories:
-
-```typescript
-import { ATDWClient } from '@roamhq/atdw-client';
-
-ATDWClient.CATEGORIES = {
-  ACCOMMODATION: 'ACCOMM',
-  ATTRACTION: 'ATTRACTION',
-  TOUR: 'TOUR',
-  RESTAURANT: 'RESTAURANT',
-  EVENT: 'EVENT',
-  HIRE: 'HIRE',
-  TRANSPORT: 'TRANSPORT',
-  GENERAL_SERVICE: 'GENERAL_SERVICE',
-  DESTINATION: 'DESTINATION',
-  JOURNEY: 'JOURNEY'
-}
-```
-
-### Australian States
-
-```typescript
-type AustralianState = 'NSW' | 'VIC' | 'QLD' | 'SA' | 'WA' | 'TAS' | 'NT' | 'ACT';
-```
-
-### Search Parameters
-
-```typescript
-interface SearchParams {
-  // Search term
-  term?: string;
-
-  // Category filtering
-  categories?: ProductCategory[];
-
-  // Geospatial search
-  lat?: number;
-  lng?: number;
-  radiusKm?: number;
-
-  // Location filtering
-  state?: AustralianState;
-  city?: string;
-  region?: string;
-
-  // Price filtering
-  minRate?: number;
-  maxRate?: number;
-
-  // Star rating
-  starRating?: number;
-
-  // Field selection
-  fields?: string[];
-
-  // Pagination
-  paginate?: boolean;  // Default: true
-  maxPages?: number;
-  pageSize?: number;   // Default: 1000, Max: 5000
-}
-```
-
-## Rate Limiting
-
-The client implements automatic rate limiting and retry logic:
-
-- **Default rate**: 2 requests per second (500ms between requests)
-- **Retry behavior**: Exponential backoff for HTTP 429 responses
-- **Retry-After header**: Respected as per ATDW recommendations
-- **Max retries**: 3 attempts (configurable)
-
-You can customize rate limiting:
-
-```typescript
-const client = createClient({
-  apiKey: 'your-key',
-  minRequestInterval: 1000,  // 1 second between requests (1 req/sec)
-  maxRetries: 5,             // 5 retry attempts
-  backoffFactor: 2           // Exponential backoff multiplier
-});
-```
-
-## TypeScript Support
-
-This library is written in TypeScript and provides full type definitions:
-
-```typescript
-import type {
-  Product,
-  ProductDetail,
-  SearchParams,
-  AustralianState,
-  ProductCategory
-} from '@roamhq/atdw-client';
-```
+The client supports the following product categories:
+- `ACCOMM` - Accommodation
+- `ATTRACTION` - Attractions
+- `TOUR` - Tours
+- `RESTAURANT` - Restaurants
+- `EVENT` - Events
+- `HIRE` - Hire services
+- `TRANSPORT` - Transport
+- `GENERAL_SERVICE` - General services
+- `DESTINATION` - Destinations
+- `JOURNEY` - Journeys
 
 ## Project Structure
 
 ```
-atdw-client/
+ATDW/
 ├── src/
-│   ├── index.ts      # Main exports
-│   ├── client.ts     # ATDWClient implementation
-│   └── types.ts      # TypeScript type definitions
-├── examples/
-│   ├── basic-usage.ts
-│   ├── search-products.ts
-│   └── location-search.ts
-├── dist/             # Compiled output (generated)
-├── package.json
-├── tsconfig.json
+│   └── atdw/
+│       ├── __init__.py
+│       └── client.py       # Main ATDW client
+├── tests/
+│   ├── test_atdw_unit.py
+│   └── test_atdw_integration.py
+├── scripts/
+│   └── test_atdw.py       # Example usage script
+├── data/
+│   └── atdw_default_fields.json
+├── docs/
+│   ├── ATDW_ATTRIBUTE_QUICK_REFERENCE.md
+│   └── ATDW_DATABASE_SCHEMA.md
+├── requirements.txt
 └── README.md
 ```
 
-## Development
+## Testing
 
-### Build
-
+Run tests with pytest:
 ```bash
-npm run build
+pytest tests/
 ```
 
-### Build and Watch
+## Rate Limiting
 
-```bash
-npm run build:watch
-```
+The client implements automatic rate limiting and exponential backoff to comply with ATDW API policies:
+- Default: 2 requests per second
+- Handles HTTP 429 responses with Retry-After header
+- Automatic exponential backoff on rate limit errors
 
-### Run Examples
+## Documentation
 
-```bash
-# Make sure to set ATDW_API_KEY environment variable first
-export ATDW_API_KEY=your-api-key
-
-# Run examples
-npm run example
-npm run example:search
-npm run example:location
-```
-
-## ATDW API Documentation
-
-For more information about the ATDW API:
-
-- **API Documentation**: https://developer.atdw.com.au
-- **Rate Limiting Policy**: https://au.intercom.help/atdw/en/articles/44447-api-rate-limiting
-- **Industry Package**: This client uses the Industry package
+- [ATDW API Documentation](https://developer.atdw.com.au)
+- [Rate Limiting Policy](https://au.intercom.help/atdw/en/articles/44447-api-rate-limiting)
+- [Roam](https://roamhq.io)
 
 ## License
 
-MIT
+MIT License
 
-## Credits
+## Source
 
-- Extracted from the [Fathom](https://github.com/roamhq/fathom) project
-- Developed for [Roam](https://roamhq.io)
-- ATDW API by [Australian Tourism Data Warehouse](https://atdw.com.au)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Support
-
-For issues and questions:
-- GitHub Issues: https://github.com/roamhq/atdw-client/issues
-- Roam: https://roamhq.io
+Extracted from the Fathom project at E:\Projects\Coding\Fathom
