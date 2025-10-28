@@ -9,7 +9,16 @@
       "Bash(git commit:*)",
       "Bash(git config:*)",
       "Bash(git reset:*)",
-      "Bash(git clean:*)"
+      "Bash(git clean:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Bash(echo $SUPABASE_DB_PASSWORD)",
+      "Bash(python:*)",
+      "Bash(if [ -f .env ])",
+      "Bash(then grep -E \"SUPABASE|POSTGRES|PASSWORD\" .env)",
+      "Bash(else echo \"No .env file found\")",
+      "Bash(fi)",
+      "Bash(then grep -E \"SUPABASE|POSTGRES|ATDW_DB\" .env)"
     ],
     "deny": [],
     "ask": []

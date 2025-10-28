@@ -11,7 +11,7 @@
 -- - Update upsert_product() function parameter
 --
 -- Rationale:
--- - OTDB is designed to be multi-source (ATDW, TripAdvisor, Google, Foursquare)
+-- - ATDW DB is designed to be multi-source (ATDW, TripAdvisor, Google, Foursquare)
 -- - Current "external_id" is ambiguous - external to what?
 -- - "atdw_id" clearly indicates this is ATDW's product identifier
 -- - Keeps supplier.external_id generic since suppliers can be from any source

@@ -805,13 +805,13 @@ def main():
         print("Example: python scripts/load_atdw_v2.py --state VIC")
         sys.exit(1)
 
-    # Connect to OTDB database
+    # Connect to ATDW database
     conn = psycopg2.connect(
-        host=os.getenv('OTDB_DB_HOST'),
-        port=os.getenv('OTDB_DB_PORT', '5432'),
-        database=os.getenv('OTDB_DB_NAME', 'postgres'),
-        user=os.getenv('OTDB_DB_USER', 'postgres'),
-        password=os.getenv('OTDB_DB_PASSWORD')
+        host=os.getenv('ATDW_DB_HOST'),
+        port=os.getenv('ATDW_DB_PORT', '5432'),
+        database=os.getenv('ATDW_DB_NAME', 'postgres'),
+        user=os.getenv('ATDW_DB_USER', 'postgres'),
+        password=os.getenv('ATDW_DB_PASSWORD')
     )
 
     # Initialize ATDW client

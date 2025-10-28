@@ -2,7 +2,7 @@
 """
 ATDW Complete Data Capture Test
 
-Tests that we capture 100% of data from ATDW API and store it correctly in OTDB.
+Tests that we capture 100% of data from ATDW API and store it correctly in ATDW database.
 
 Usage:
     python scripts/test_atdw_complete_data_capture.py [--product-id PRODUCT_ID]
@@ -28,13 +28,13 @@ from scripts.load_atdw_v2 import ATDWV2Loader
 
 
 class ATDWDataCaptureTest:
-    """Test complete data capture from ATDW to OTDB."""
+    """Test complete data capture from ATDW to ATDW database."""
 
     def __init__(self, conn, atdw_client: ATDWClient):
         self.conn = conn
         self.client = atdw_client
         self.atdw_data = None
-        self.otdb_data = {}
+        self.atdw_db_data = {}
         self.missing_fields = []
         self.coverage_report = {}
 
@@ -148,10 +148,10 @@ class ATDWDataCaptureTest:
 
         return product
 
-    def load_to_otdb(self, product: Dict):
-        """Load product into OTDB using V2 loader."""
+    def load_to_atdw_db(self, product: Dict):
+        """Load product into ATDW DB using V2 loader."""
         print(f"\n{'='*70}")
-        print(f"STEP 2: LOADING INTO OTDB")
+        print(f"STEP 2: LOADING INTO ATDW DB")
         print(f"{'='*70}\n")
 
         # Clear existing data for this product
@@ -162,7 +162,7 @@ class ATDWDataCaptureTest:
                 WHERE source = 'ATDW' AND external_id = %s
             """, (product_id,))
             self.conn.commit()
-            print(f"Cleared existing product {product_id} from OTDB")
+            print(f"Cleared existing product {product_id} from ATDW DB")
 
         # Load using V2 loader
         loader = ATDWV2Loader(self.conn, self.client, auto_accept_attributes=True)
@@ -176,10 +176,10 @@ class ATDWDataCaptureTest:
         print(f"  Media added: {loader.stats['media_added']}")
         print(f"  Errors: {loader.stats['errors']}")
 
-    def fetch_from_otdb(self, external_id: str):
-        """Fetch product and all related data from OTDB."""
+    def fetch_from_atdw_db(self, external_id: str):
+        """Fetch product and all related data from ATDW DB."""
         print(f"\n{'='*70}")
-        print(f"STEP 3: FETCHING FROM OTDB")
+        print(f"STEP 3: FETCHING FROM ATDW DB")
         print(f"{'='*70}\n")
 
         with self.conn.cursor(cursor_factory=RealDictCursor) as cur:
@@ -191,18 +191,18 @@ class ATDWDataCaptureTest:
             product = cur.fetchone()
 
             if not product:
-                raise ValueError(f"Product {external_id} not found in OTDB")
+                raise ValueError(f"Product {external_id} not found in ATDW DB")
 
             pid = product['product_id']
-            self.otdb_data['product'] = dict(product)
+            self.atdw_db_data['product'] = dict(product)
 
             # Get addresses
             cur.execute("SELECT * FROM addresses WHERE product_id = %s", (pid,))
-            self.otdb_data['addresses'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['addresses'] = [dict(row) for row in cur.fetchall()]
 
             # Get communication
             cur.execute("SELECT * FROM communication WHERE product_id = %s", (pid,))
-            self.otdb_data['communication'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['communication'] = [dict(row) for row in cur.fetchall()]
 
             # Get attributes
             cur.execute("""
@@ -211,7 +211,7 @@ class ATDWDataCaptureTest:
                 JOIN attribute_def a ON pa.attribute_id = a.attribute_id
                 WHERE pa.product_id = %s
             """, (pid,))
-            self.otdb_data['attributes'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['attributes'] = [dict(row) for row in cur.fetchall()]
 
             # Get media
             cur.execute("""
@@ -221,43 +221,43 @@ class ATDWDataCaptureTest:
                 WHERE pm.product_id = %s
                 ORDER BY pm.ordinal
             """, (pid,))
-            self.otdb_data['media'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['media'] = [dict(row) for row in cur.fetchall()]
 
             # Get services
             cur.execute("SELECT * FROM services WHERE product_id = %s", (pid,))
-            self.otdb_data['services'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['services'] = [dict(row) for row in cur.fetchall()]
 
             # Get rates
             cur.execute("SELECT * FROM rates WHERE product_id = %s", (pid,))
-            self.otdb_data['rates'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['rates'] = [dict(row) for row in cur.fetchall()]
 
             # Get deals
             cur.execute("SELECT * FROM deals WHERE product_id = %s", (pid,))
-            self.otdb_data['deals'] = [dict(row) for row in cur.fetchall()]
+            self.atdw_db_data['deals'] = [dict(row) for row in cur.fetchall()]
 
-        print(f"OTDB Data Retrieved:")
-        print(f"  Product: {self.otdb_data['product']['product_name']}")
-        print(f"  Addresses: {len(self.otdb_data['addresses'])}")
-        print(f"  Communication: {len(self.otdb_data['communication'])}")
-        print(f"  Attributes: {len(self.otdb_data['attributes'])}")
-        print(f"  Media: {len(self.otdb_data['media'])}")
-        print(f"  Services: {len(self.otdb_data['services'])}")
-        print(f"  Rates: {len(self.otdb_data['rates'])}")
-        print(f"  Deals: {len(self.otdb_data['deals'])}")
+        print(f"ATDW DB Data Retrieved:")
+        print(f"  Product: {self.atdw_db_data['product']['product_name']}")
+        print(f"  Addresses: {len(self.atdw_db_data['addresses'])}")
+        print(f"  Communication: {len(self.atdw_db_data['communication'])}")
+        print(f"  Attributes: {len(self.atdw_db_data['attributes'])}")
+        print(f"  Media: {len(self.atdw_db_data['media'])}")
+        print(f"  Services: {len(self.atdw_db_data['services'])}")
+        print(f"  Rates: {len(self.atdw_db_data['rates'])}")
+        print(f"  Deals: {len(self.atdw_db_data['deals'])}")
 
         # Update coverage report
-        self.coverage_report['otdb_addresses_count'] = len(self.otdb_data['addresses'])
-        self.coverage_report['otdb_communication_count'] = len(self.otdb_data['communication'])
-        self.coverage_report['otdb_attributes_count'] = len(self.otdb_data['attributes'])
-        self.coverage_report['otdb_media_count'] = len(self.otdb_data['media'])
-        self.coverage_report['otdb_services_count'] = len(self.otdb_data['services'])
-        self.coverage_report['otdb_rates_count'] = len(self.otdb_data['rates'])
-        self.coverage_report['otdb_deals_count'] = len(self.otdb_data['deals'])
+        self.coverage_report['atdw_db_addresses_count'] = len(self.atdw_db_data['addresses'])
+        self.coverage_report['atdw_db_communication_count'] = len(self.atdw_db_data['communication'])
+        self.coverage_report['atdw_db_attributes_count'] = len(self.atdw_db_data['attributes'])
+        self.coverage_report['atdw_db_media_count'] = len(self.atdw_db_data['media'])
+        self.coverage_report['atdw_db_services_count'] = len(self.atdw_db_data['services'])
+        self.coverage_report['atdw_db_rates_count'] = len(self.atdw_db_data['rates'])
+        self.coverage_report['atdw_db_deals_count'] = len(self.atdw_db_data['deals'])
 
     def compare_data(self):
-        """Compare ATDW vs OTDB data field by field."""
+        """Compare ATDW vs ATDW DB data field by field."""
         print(f"\n{'='*70}")
-        print(f"STEP 4: DATA COMPARISON - ATDW vs OTDB")
+        print(f"STEP 4: DATA COMPARISON - ATDW vs ATDW DB")
         print(f"{'='*70}\n")
 
         issues = []
@@ -268,35 +268,35 @@ class ATDWDataCaptureTest:
 
         comparisons = [
             ('Addresses', self.coverage_report['addresses_count'],
-             self.coverage_report['otdb_addresses_count']),
+             self.coverage_report['atdw_db_addresses_count']),
             ('Communication', self.coverage_report['communication_count'],
-             self.coverage_report['otdb_communication_count']),
+             self.coverage_report['atdw_db_communication_count']),
             ('Attributes', self.coverage_report['attributes_count'],
-             self.coverage_report['otdb_attributes_count']),
+             self.coverage_report['atdw_db_attributes_count']),
             ('Multimedia', self.coverage_report['multimedia_count'],
-             self.coverage_report['otdb_media_count']),
+             self.coverage_report['atdw_db_media_count']),
             ('Services', self.coverage_report['services_count'],
-             self.coverage_report['otdb_services_count']),
+             self.coverage_report['atdw_db_services_count']),
             ('Rates', self.coverage_report['rates_count'],
-             self.coverage_report['otdb_rates_count']),
+             self.coverage_report['atdw_db_rates_count']),
             ('Deals', self.coverage_report['deals_count'],
-             self.coverage_report['otdb_deals_count']),
+             self.coverage_report['atdw_db_deals_count']),
         ]
 
-        for name, atdw_count, otdb_count in comparisons:
-            match = "[OK]" if atdw_count == otdb_count else "[!!]"
-            status = "OK" if atdw_count == otdb_count else "MISMATCH"
-            print(f"{match} {name:20} ATDW: {atdw_count:3} | OTDB: {otdb_count:3} | {status}")
+        for name, atdw_count, atdw_db_count in comparisons:
+            match = "[OK]" if atdw_count == atdw_db_count else "[!!]"
+            status = "OK" if atdw_count == atdw_db_count else "MISMATCH"
+            print(f"{match} {name:20} ATDW: {atdw_count:3} | ATDW DB: {atdw_db_count:3} | {status}")
 
-            if atdw_count != otdb_count:
-                issues.append(f"{name} count mismatch: ATDW={atdw_count}, OTDB={otdb_count}")
+            if atdw_count != atdw_db_count:
+                issues.append(f"{name} count mismatch: ATDW={atdw_count}, ATDW_DB={atdw_db_count}")
             else:
                 successes.append(f"{name} count matches")
 
         # Compare core product fields
         print(f"\n=== CORE PRODUCT FIELDS ===\n")
 
-        product = self.otdb_data['product']
+        product = self.atdw_db_data['product']
         atdw = self.atdw_data
 
         field_checks = [
@@ -308,13 +308,13 @@ class ATDWDataCaptureTest:
             ('Active Status', True, product['is_active']),  # All fetched products should be active
         ]
 
-        for name, atdw_val, otdb_val in field_checks:
-            match = "[OK]" if atdw_val == otdb_val else "[!!]"
-            status = "OK" if atdw_val == otdb_val else "MISMATCH"
-            print(f"{match} {name:20} ATDW: {str(atdw_val)[:30]:30} | OTDB: {str(otdb_val)[:30]:30} | {status}")
+        for name, atdw_val, atdw_db_val in field_checks:
+            match = "[OK]" if atdw_val == atdw_db_val else "[!!]"
+            status = "OK" if atdw_val == atdw_db_val else "MISMATCH"
+            print(f"{match} {name:20} ATDW: {str(atdw_val)[:30]:30} | ATDW DB: {str(atdw_db_val)[:30]:30} | {status}")
 
-            if atdw_val != otdb_val:
-                issues.append(f"{name} mismatch: ATDW='{atdw_val}', OTDB='{otdb_val}'")
+            if atdw_val != atdw_db_val:
+                issues.append(f"{name} mismatch: ATDW='{atdw_val}', ATDW_DB='{atdw_db_val}'")
             else:
                 successes.append(f"{name} matches")
 
@@ -343,30 +343,30 @@ class ATDWDataCaptureTest:
                         atdw_lng = float(lng)
                         break
 
-            otdb_lat = float(product['latitude'] or 0)
-            otdb_lng = float(product['longitude'] or 0)
+            atdw_db_lat = float(product['latitude'] or 0)
+            atdw_db_lng = float(product['longitude'] or 0)
 
-            lat_match = abs(atdw_lat - otdb_lat) < 0.0001 if atdw_lat and otdb_lat else False
-            lng_match = abs(atdw_lng - otdb_lng) < 0.0001 if atdw_lng and otdb_lng else False
+            lat_match = abs(atdw_lat - atdw_db_lat) < 0.0001 if atdw_lat and atdw_db_lat else False
+            lng_match = abs(atdw_lng - atdw_db_lng) < 0.0001 if atdw_lng and atdw_db_lng else False
 
             lat_status = "OK" if lat_match else "MISMATCH"
             lng_status = "OK" if lng_match else "MISMATCH"
 
-            print(f"{'[OK]' if lat_match else '[!!]'} Latitude:            ATDW: {atdw_lat:30} | OTDB: {otdb_lat:30} | {lat_status}")
-            print(f"{'[OK]' if lng_match else '[!!]'} Longitude:           ATDW: {atdw_lng:30} | OTDB: {otdb_lng:30} | {lng_status}")
+            print(f"{'[OK]' if lat_match else '[!!]'} Latitude:            ATDW: {atdw_lat:30} | ATDW DB: {atdw_db_lat:30} | {lat_status}")
+            print(f"{'[OK]' if lng_match else '[!!]'} Longitude:           ATDW: {atdw_lng:30} | ATDW DB: {atdw_db_lng:30} | {lng_status}")
 
             if not lat_match:
-                issues.append(f"Latitude mismatch: ATDW={atdw_lat}, OTDB={otdb_lat}")
+                issues.append(f"Latitude mismatch: ATDW={atdw_lat}, ATDW_DB={atdw_db_lat}")
             if not lng_match:
-                issues.append(f"Longitude mismatch: ATDW={atdw_lng}, OTDB={otdb_lng}")
+                issues.append(f"Longitude mismatch: ATDW={atdw_lng}, ATDW_DB={atdw_db_lng}")
 
         # Check for missing data structures
         print(f"\n=== MISSING DATA STRUCTURES ===\n")
 
         missing_structures = []
 
-        if self.coverage_report['opening_hours_count'] > 0 and self.coverage_report.get('otdb_opening_hours_count', 0) == 0:
-            missing_structures.append(f"Opening Hours: ATDW has {self.coverage_report['opening_hours_count']}, OTDB has 0")
+        if self.coverage_report['opening_hours_count'] > 0 and self.coverage_report.get('atdw_db_opening_hours_count', 0) == 0:
+            missing_structures.append(f"Opening Hours: ATDW has {self.coverage_report['opening_hours_count']}, ATDW DB has 0")
 
         if missing_structures:
             for item in missing_structures:
@@ -402,7 +402,7 @@ class ATDWDataCaptureTest:
         """Save detailed comparison to JSON file."""
         if filename is None:
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            filename = f"data/atdw_otdb_comparison_{timestamp}.json"
+            filename = f"data/atdw_atdw_db_comparison_{timestamp}.json"
 
         report = {
             'test_timestamp': datetime.now().isoformat(),
@@ -416,12 +416,12 @@ class ATDWDataCaptureTest:
                 'attributes': self.atdw_data.get('attributes', [])[:3],
                 'services': self.atdw_data.get('services', [])[:1],
             },
-            'otdb_sample': {
-                'addresses': self.otdb_data.get('addresses', [])[:1],
-                'communication': self.otdb_data.get('communication', [])[:1],
-                'media': self.otdb_data.get('media', [])[:1],
-                'attributes': self.otdb_data.get('attributes', [])[:3],
-                'services': self.otdb_data.get('services', [])[:1],
+            'atdw_db_sample': {
+                'addresses': self.atdw_db_data.get('addresses', [])[:1],
+                'communication': self.atdw_db_data.get('communication', [])[:1],
+                'media': self.atdw_db_data.get('media', [])[:1],
+                'attributes': self.atdw_db_data.get('attributes', [])[:3],
+                'services': self.atdw_db_data.get('services', [])[:1],
             }
         }
 
@@ -435,7 +435,7 @@ def main():
     load_dotenv()
 
     parser = argparse.ArgumentParser(
-        description='Test complete data capture from ATDW to OTDB'
+        description='Test complete data capture from ATDW to ATDW DB'
     )
     parser.add_argument(
         '--product-id',
@@ -449,13 +449,13 @@ def main():
 
     args = parser.parse_args()
 
-    # Connect to OTDB
+    # Connect to ATDW DB
     conn = psycopg2.connect(
-        host=os.getenv('OTDB_DB_HOST'),
-        port=os.getenv('OTDB_DB_PORT', '5432'),
-        database=os.getenv('OTDB_DB_NAME', 'postgres'),
-        user=os.getenv('OTDB_DB_USER', 'postgres'),
-        password=os.getenv('OTDB_DB_PASSWORD')
+        host=os.getenv('ATDW_DB_HOST'),
+        port=os.getenv('ATDW_DB_PORT', '5432'),
+        database=os.getenv('ATDW_DB_NAME', 'postgres'),
+        user=os.getenv('ATDW_DB_USER', 'postgres'),
+        password=os.getenv('ATDW_DB_PASSWORD')
     )
 
     # Initialize ATDW client
@@ -480,11 +480,11 @@ def main():
         # Step 1: Fetch from ATDW
         product = test.fetch_atdw_product(product_id)
 
-        # Step 2: Load to OTDB
-        test.load_to_otdb(product)
+        # Step 2: Load to ATDW DB
+        test.load_to_atdw_db(product)
 
-        # Step 3: Fetch from OTDB
-        test.fetch_from_otdb(product_id)
+        # Step 3: Fetch from ATDW DB
+        test.fetch_from_atdw_db(product_id)
 
         # Step 4: Compare
         success = test.compare_data()

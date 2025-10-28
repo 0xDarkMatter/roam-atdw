@@ -1,7 +1,7 @@
 # ATDW V2 Schema Deployment Status
 
 **Date:** 2025-10-26
-**Database:** OTDB (Supabase) - `db.tkambmmvfqkuwrucajey.supabase.co`
+**Database:** ATDW DB (Supabase) - `db.tkambmmvfqkuwrucajey.supabase.co`
 **Status:** ✅ COMPLETE - Schema deployed, loader fully operational
 
 ---
@@ -42,7 +42,7 @@
    - 23 optimization opportunities applied
    - File: `migrations/010_atdw_schema_v2_fixed.sql`
 
-2. **Schema Deployed to OTDB**
+2. **Schema Deployed to ATDW DB**
    - 14 tables created
    - All indexes, triggers, and functions deployed
    - Materialized views configured
@@ -292,9 +292,9 @@ from dotenv import load_dotenv
 load_dotenv()
 import os, psycopg2
 conn = psycopg2.connect(
-    host=os.getenv('OTDB_DB_HOST'),
+    host=os.getenv('ATDW DB_DB_HOST'),
     port='5432', database='postgres',
-    user='postgres', password=os.getenv('OTDB_DB_PASSWORD')
+    user='postgres', password=os.getenv('ATDW DB_DB_PASSWORD')
 )
 cur = conn.cursor()
 cur.execute('DELETE FROM products CASCADE')
@@ -314,9 +314,9 @@ from dotenv import load_dotenv
 load_dotenv()
 import os, psycopg2
 conn = psycopg2.connect(
-    host=os.getenv('OTDB_DB_HOST'),
+    host=os.getenv('ATDW DB_DB_HOST'),
     port='5432', database='postgres',
-    user='postgres', password=os.getenv('OTDB_DB_PASSWORD')
+    user='postgres', password=os.getenv('ATDW DB_DB_PASSWORD')
 )
 cur = conn.cursor()
 
@@ -498,12 +498,12 @@ python scripts/load_atdw_v2.py --state VIC --yes
 
 **Required in `.env`:**
 ```env
-# OTDB Database
-OTDB_DB_HOST=db.tkambmmvfqkuwrucajey.supabase.co
-OTDB_DB_PORT=5432
-OTDB_DB_NAME=postgres
-OTDB_DB_USER=postgres
-OTDB_DB_PASSWORD=wjgVuLWWfJhAsmBf
+# ATDW DB Database
+ATDW DB_DB_HOST=db.tkambmmvfqkuwrucajey.supabase.co
+ATDW DB_DB_PORT=5432
+ATDW DB_DB_NAME=postgres
+ATDW DB_DB_USER=postgres
+ATDW DB_DB_PASSWORD=wjgVuLWWfJhAsmBf
 
 # ATDW API
 ATDW_API_KEY=ee37502ebe584551a7eeb42bf2e26450
@@ -540,13 +540,13 @@ load_dotenv()
 import os, psycopg2
 
 conn = psycopg2.connect(
-    host=os.getenv('OTDB_DB_HOST'),
+    host=os.getenv('ATDW DB_DB_HOST'),
     port='5432',
     database='postgres',
     user='postgres',
-    password=os.getenv('OTDB_DB_PASSWORD')
+    password=os.getenv('ATDW DB_DB_PASSWORD')
 )
-print('✓ Connected to OTDB')
+print('✓ Connected to ATDW DB')
 
 cur = conn.cursor()
 cur.execute('SELECT COUNT(*) FROM products')
