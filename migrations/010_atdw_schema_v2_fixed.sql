@@ -146,6 +146,7 @@ CREATE TABLE IF NOT EXISTS addresses (
   city         TEXT, state TEXT, postcode TEXT, country TEXT,
   latitude     DOUBLE PRECISION, longitude DOUBLE PRECISION,
   geom         geography(Point,4326),              -- FIXED: geography
+  address_sha256 TEXT,                             -- stable hash for change detection
   created_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at   TIMESTAMPTZ NOT NULL DEFAULT now()
 );
@@ -169,6 +170,29 @@ CREATE TRIGGER addresses_set_geom
 BEFORE INSERT OR UPDATE OF longitude, latitude ON addresses
 FOR EACH ROW EXECUTE FUNCTION set_address_geom();
 
+-- Auto-compute address_sha256 hash for delta update detection
+CREATE OR REPLACE FUNCTION compute_address_sha256()
+RETURNS trigger LANGUAGE plpgsql AS $$
+BEGIN
+  NEW.address_sha256 := encode(digest(
+    COALESCE(NEW.kind, '') ||
+    COALESCE(NEW.line1, '') ||
+    COALESCE(NEW.line2, '') ||
+    COALESCE(NEW.line3, '') ||
+    COALESCE(NEW.city, '') ||
+    COALESCE(NEW.state, '') ||
+    COALESCE(NEW.postcode, '') ||
+    COALESCE(NEW.country, '') ||
+    COALESCE(NEW.latitude::text, '') ||
+    COALESCE(NEW.longitude::text, '')
+  , 'sha256'), 'hex');
+  RETURN NEW;
+END$$;
+
+CREATE TRIGGER addresses_compute_sha256
+BEFORE INSERT OR UPDATE ON addresses
+FOR EACH ROW EXECUTE FUNCTION compute_address_sha256();
+
 -- ---------- 4) Communication ----------
 
 CREATE TABLE IF NOT EXISTS communication (
@@ -176,6 +200,7 @@ CREATE TABLE IF NOT EXISTS communication (
   product_id  BIGINT NOT NULL REFERENCES products(product_id) ON DELETE CASCADE,
   kind        TEXT NOT NULL,         -- phone/email/website/booking/instagram...
   value       TEXT NOT NULL,
+  comms_sha256 TEXT,                 -- stable hash for change detection
   created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
@@ -183,6 +208,21 @@ CREATE TABLE IF NOT EXISTS communication (
 CREATE TRIGGER communication_set_updated_at
 BEFORE UPDATE ON communication
 FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+-- Auto-compute comms_sha256 hash for delta update detection
+CREATE OR REPLACE FUNCTION compute_communication_sha256()
+RETURNS trigger LANGUAGE plpgsql AS $$
+BEGIN
+  NEW.comms_sha256 := encode(digest(
+    COALESCE(NEW.kind, '') ||
+    COALESCE(NEW.value, '')
+  , 'sha256'), 'hex');
+  RETURN NEW;
+END$$;
+
+CREATE TRIGGER communication_compute_sha256
+BEFORE INSERT OR UPDATE ON communication
+FOR EACH ROW EXECUTE FUNCTION compute_communication_sha256();
 
 -- ---------- 5) Services (rooms/tours/sessions) ----------
 
@@ -498,10 +538,12 @@ CREATE INDEX IF NOT EXISTS products_content_sha256_idx ON products(content_sha25
 -- Addresses
 CREATE INDEX IF NOT EXISTS addresses_prod_idx       ON addresses(product_id);
 CREATE INDEX IF NOT EXISTS addresses_geom_gix       ON addresses USING GIST (geom);
+CREATE INDEX IF NOT EXISTS addresses_sha256_idx     ON addresses(address_sha256);
 
 -- Communication
 CREATE INDEX IF NOT EXISTS communication_prod_idx   ON communication(product_id);
 CREATE INDEX IF NOT EXISTS communication_kind_idx   ON communication(kind);
+CREATE INDEX IF NOT EXISTS communication_sha256_idx ON communication(comms_sha256);
 
 -- Services
 CREATE INDEX IF NOT EXISTS services_prod_idx        ON services(product_id);

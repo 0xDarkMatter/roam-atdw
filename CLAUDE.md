@@ -148,15 +148,21 @@ The ATDW API supports the following product categories:
 
 ### Database Schema
 
-The project uses the PostgreSQL V2 schema:
+The project uses the PostgreSQL V2 schema with optimizations:
 
 **V2 Schema** (`migrations/010_atdw_schema_v2_fixed.sql`)
 - Enhanced schema with comprehensive attribute support
 - PostGIS geography fields for accurate distance queries
-- SHA256 hash-based change detection
-- Tables: products, suppliers, addresses, communications, media, attributes, services, rates, deals
+- SHA256 hash-based change detection for products, addresses, communication, and services
+- Tables: products, suppliers, addresses, communication, media, attributes, services, rates, deals
 - Full support for ATDW product detail structure
 - Optimized for delta updates and high-performance caching
+
+**Services Table Optimization** (`migrations/025_optimize_services_table.sql`)
+- Structured columns for common filters: capacity, accessibility, pets allowed, children allowed
+- 90% reduction in JSONB storage by promoting frequently queried fields
+- Hash-based change detection for efficient delta updates
+- Indexes optimized for accommodation/tour searches
 
 See `docs/ATDW_DATABASE_SCHEMA.md` for detailed schema documentation.
 

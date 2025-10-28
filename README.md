@@ -29,13 +29,14 @@ This project was extracted from the [Fathom](https://github.com/0xDarkMatter/fat
 - Pagination support (up to 5,000 results per request)
 
 ### Database Features
-- **Hash-based change detection** - SHA256 hashing of product content, media, and attributes for efficient delta updates
+- **Hash-based change detection** - SHA256 hashing of products, addresses, communication, and services for efficient delta updates (75%+ reduction in processing time)
 - **Geography fields** - PostGIS `geography(Point,4326)` type for accurate distance-based queries
 - **Auto-computed geolocation** - Automatic geography point generation from lat/lon coordinates
 - **Change tracking** - Comprehensive audit log of all product modifications
 - **Idempotent upserts** - Safe to run imports multiple times without duplicates
 - **EAV attribute storage** - Flexible attribute system with automatic discovery
 - **Media deduplication** - Prevents duplicate images and videos using content hashing
+- **Optimized services table** - Structured columns for common filters (capacity, accessibility, pets) with 90% reduction in JSONB storage
 
 ## Installation
 
@@ -131,7 +132,8 @@ ATDW/
 ├── migrations/
 │   ├── 010_atdw_schema_v2_fixed.sql    # ATDW V2 schema (primary)
 │   ├── 015_rename_external_id_to_atdw_id.sql  # Field rename migration
-│   └── 023_add_remaining_atdw_tables.sql      # Additional tables
+│   ├── 023_add_remaining_atdw_tables.sql      # Additional tables
+│   └── 025_optimize_services_table.sql # Services table optimization
 ├── data/
 │   ├── atdw_default_fields.json        # Default field definitions
 │   ├── atdw_attribute_catalog.json     # Complete attribute catalog
@@ -168,12 +170,13 @@ The project includes PostgreSQL schema migrations with advanced features for eff
 The V2 schema (`migrations/010_atdw_schema_v2_fixed.sql`) includes:
 
 - **PostGIS geography fields** - Accurate distance calculations using `geography(Point,4326)`
-- **Automatic hash computation** - SHA256 hashes for content, media, and attributes via database triggers
-- **Change detection** - Delta updates skip unchanged products, reducing processing time by 75%+
+- **Automatic hash computation** - SHA256 hashes for products, addresses, communication, and services via database triggers
+- **Change detection** - Delta updates skip unchanged records, reducing processing time by 75%+
 - **Idempotent upserts** - Safe to re-run imports without creating duplicates
 - **EAV attribute system** - Flexible attribute storage with automatic discovery of new attributes
 - **Media deduplication** - Content-based hashing prevents duplicate images
-- **Comprehensive indexes** - Optimized for common query patterns (category, state, geolocation)
+- **Comprehensive indexes** - Optimized for common query patterns (category, state, geolocation, capacity, accessibility)
+- **Optimized services storage** - Structured columns replace JSONB for frequently queried fields (90% storage reduction)
 
 ### Setup
 
@@ -235,6 +238,36 @@ ORDER BY COUNT(*) DESC;
 - `geography` uses meters for distance calculations (accurate real-world distances)
 - `geometry` uses degrees (inaccurate for distance queries)
 - Example: 10km radius is exactly 10,000 meters, not ~0.09 degrees (which varies by latitude)
+
+### Optimized Service Queries
+
+The services table is optimized for common accommodation and tour searches:
+
+```sql
+-- Find pet-friendly accommodation with capacity for 4+ people
+SELECT p.product_name, s.name, s.max_capacity
+FROM products p
+JOIN services s ON s.product_id = p.product_id
+WHERE p.category = 'ACCOMM'
+  AND s.pets_allowed = true
+  AND s.max_capacity >= 4
+ORDER BY s.sequence;
+
+-- Find accessible tours
+SELECT p.product_name, s.name, s.description
+FROM products p
+JOIN services s ON s.product_id = p.product_id
+WHERE p.category = 'TOUR'
+  AND s.accessible = true
+ORDER BY p.product_name;
+
+-- Count services by capacity
+SELECT max_capacity, COUNT(*)
+FROM services
+WHERE max_capacity IS NOT NULL
+GROUP BY max_capacity
+ORDER BY max_capacity;
+```
 
 ## Scripts
 

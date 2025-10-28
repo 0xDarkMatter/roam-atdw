@@ -492,7 +492,7 @@ class ATDWV2Loader:
         """Upsert product addresses."""
         with self.conn.cursor() as cur:
             # Delete existing addresses
-            cur.execute("DELETE FROM product_addresses WHERE product_id = %s", (product_id,))
+            cur.execute("DELETE FROM addresses WHERE product_id = %s", (product_id,))
 
             # Insert new addresses
             for addr in addresses:
@@ -515,7 +515,7 @@ class ATDWV2Loader:
                     lng = None
 
                 cur.execute("""
-                    INSERT INTO product_addresses (
+                    INSERT INTO addresses (
                         product_id, kind, line1, line2, line3,
                         city, state, postcode, country,
                         latitude, longitude
@@ -539,7 +539,7 @@ class ATDWV2Loader:
         """Upsert product communication details from ATDW communication array."""
         with self.conn.cursor() as cur:
             # Delete existing
-            cur.execute("DELETE FROM product_contacts WHERE product_id = %s", (product_id,))
+            cur.execute("DELETE FROM communication WHERE product_id = %s", (product_id,))
 
             # Insert from array
             for comm in comm_list:
@@ -572,33 +572,83 @@ class ATDWV2Loader:
                         kind = 'phone'
 
                 cur.execute("""
-                    INSERT INTO product_contacts (product_id, kind, value)
+                    INSERT INTO communication (product_id, kind, value)
                     VALUES (%s, %s, %s)
                 """, (product_id, kind, value))
 
             # REMOVED COMMIT - Now batched in load_state()
 
     def _upsert_services(self, product_id: UUID, services: List[Dict]):
-        """Upsert product services (rooms/tours)."""
+        """Upsert product services (rooms/tours) with optimized structured columns."""
         with self.conn.cursor() as cur:
             # Delete existing services
-            cur.execute("DELETE FROM product_services WHERE product_id = %s", (product_id,))
+            cur.execute("DELETE FROM services WHERE product_id = %s", (product_id,))
 
             for service in services:
+                # Extract capacity from nested productServiceConfigurationRelationship
+                min_capacity = None
+                max_capacity = None
+                config_rel = service.get('productServiceConfigurationRelationship', [])
+                if config_rel and len(config_rel) > 0:
+                    min_capacity = config_rel[0].get('minimumCapacity')
+                    max_capacity = config_rel[0].get('maximumCapacity')
+                    # Convert empty strings to None
+                    min_capacity = int(min_capacity) if min_capacity and str(min_capacity).strip() else None
+                    max_capacity = int(max_capacity) if max_capacity and str(max_capacity).strip() else None
+
+                # Parse boolean flags (ATDW uses 'Y'/'N'/'' strings)
+                def parse_flag(value):
+                    if value and str(value).strip().upper() == 'Y':
+                        return True
+                    elif value and str(value).strip().upper() == 'N':
+                        return False
+                    return None
+
+                children_allowed = parse_flag(service.get('childrenCateredForFlag'))
+                pets_allowed = parse_flag(service.get('petsAllowedFlag'))
+                accessible = parse_flag(service.get('disabledAccessFlag'))
+
+                # Parse sequence number
+                sequence = service.get('sequenceNumber')
+                sequence = int(sequence) if sequence and str(sequence).strip() else None
+
+                # Parse ATDW timestamp
+                atdw_updated_at = service.get('serviceUpdateDate')
+                if atdw_updated_at:
+                    try:
+                        # Parse ISO format: "2025-01-22T15:00:54.513+10:00"
+                        from dateutil import parser
+                        atdw_updated_at = parser.isoparse(atdw_updated_at)
+                    except:
+                        atdw_updated_at = None
+
+                # Build minimal details JSONB (exclude fields now in structured columns)
+                details = {k: v for k, v in service.items() if k not in [
+                    'serviceId', 'serviceName', 'sequenceNumber', 'serviceDescription',
+                    'childrenCateredForFlag', 'petsAllowedFlag', 'disabledAccessFlag',
+                    'serviceUpdateDate', 'productServiceConfigurationRelationship'
+                ]}
+
                 cur.execute("""
-                    INSERT INTO product_services (
-                        product_id, name, service_kind,
-                        occupancy_adults, occupancy_children,
-                        bed_config, details
-                    ) VALUES (%s, %s, %s, %s, %s, %s, %s)
+                    INSERT INTO services (
+                        product_id, external_id, name, sequence, description,
+                        min_capacity, max_capacity,
+                        children_allowed, pets_allowed, accessible,
+                        atdw_updated_at, details
+                    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 """, (
                     product_id,
+                    service.get('serviceId'),
                     service.get('serviceName'),
-                    service.get('serviceType'),
-                    service.get('occupancyAdults'),
-                    service.get('occupancyChildren'),
-                    service.get('bedConfiguration'),
-                    json.dumps(service)
+                    sequence,
+                    service.get('serviceDescription'),
+                    min_capacity,
+                    max_capacity,
+                    children_allowed,
+                    pets_allowed,
+                    accessible,
+                    atdw_updated_at,
+                    json.dumps(details)
                 ))
 
             # REMOVED COMMIT - Now batched in load_state()
@@ -607,18 +657,19 @@ class ATDWV2Loader:
         """Upsert product rates/pricing."""
         with self.conn.cursor() as cur:
             # Delete existing rates
-            cur.execute("DELETE FROM product_rates WHERE product_id = %s", (product_id,))
+            cur.execute("DELETE FROM rates WHERE product_id = %s", (product_id,))
 
             for rate in rates:
-                # Parse price - keep as dollars (NUMERIC(10,2))
+                # Parse price - convert to cents (INTEGER)
                 price_from = rate.get('priceFrom')
                 price_to = rate.get('priceTo')
 
-                # Convert to Decimal (exact precision)
-                price = None
+                # Convert to cents (exact precision)
+                price_cents = None
                 try:
                     if price_from:
-                        price = Decimal(str(price_from))
+                        price_decimal = Decimal(str(price_from))
+                        price_cents = int(price_decimal * 100)  # Convert dollars to cents
                 except (ValueError, TypeError):
                     pass
 
@@ -638,14 +689,14 @@ class ATDWV2Loader:
                 end_date = date(2099, 12, 31)
 
                 cur.execute("""
-                    INSERT INTO product_rates (
-                        product_id, service_id, price, currency,
+                    INSERT INTO rates (
+                        product_id, service_id, price_cents, currency,
                         start_date, end_date, constraints_json
                     ) VALUES (%s, %s, %s, %s, %s, %s, %s)
                 """, (
                     product_id,
                     None,  # service_id - not linked to specific service
-                    price,
+                    price_cents,
                     rate.get('attributeIdCurrency', 'AUD'),
                     start_date,
                     end_date,
@@ -658,7 +709,7 @@ class ATDWV2Loader:
         """Upsert product deals/offers."""
         with self.conn.cursor() as cur:
             # Delete existing deals
-            cur.execute("DELETE FROM product_deals WHERE product_id = %s", (product_id,))
+            cur.execute("DELETE FROM deals WHERE product_id = %s", (product_id,))
 
             for deal in deals:
                 # Parse dates
@@ -672,12 +723,13 @@ class ATDWV2Loader:
                     except (ValueError, TypeError):
                         return None
 
-                # Parse price - keep as dollars (NUMERIC(10,2))
-                price = None
+                # Parse price - convert to cents (INTEGER)
+                price_cents = None
                 deal_price = deal.get('dealPrice')
                 if deal_price:
                     try:
-                        price = Decimal(str(deal_price))
+                        price_decimal = Decimal(str(deal_price))
+                        price_cents = int(price_decimal * 100)  # Convert dollars to cents
                     except (ValueError, TypeError):
                         pass
 
@@ -702,15 +754,15 @@ class ATDWV2Loader:
                 end_date = parse_date(deal.get('dealEndDate')) or date(2099, 12, 31)
 
                 cur.execute("""
-                    INSERT INTO product_deals (
-                        product_id, service_id, title, price, currency,
+                    INSERT INTO deals (
+                        product_id, service_id, title, price_cents, currency,
                         start_date, end_date, constraints_json
                     ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """, (
                     product_id,
                     None,  # service_id - not linked to specific service
                     deal.get('dealName'),
-                    price,
+                    price_cents,
                     'AUD',  # Assuming AUD for Australian deals
                     start_date,
                     end_date,
