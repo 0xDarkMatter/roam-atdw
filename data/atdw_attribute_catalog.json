@@ -1,0 +1,2036 @@
+{
+  "metadata": {
+    "generated_by": "extract_atdw_attributes.py",
+    "total_products_searched": 800,
+    "total_products_detailed": 160,
+    "total_attribute_types": 23,
+    "total_attributes": 198,
+    "note": "This catalog was generated from a sample of ATDW products. Additional attributes may exist."
+  },
+  "attribute_types": [
+    {
+      "type_code": "ACCESSIBILITY",
+      "description": "Accessibility",
+      "attribute_count": 3,
+      "sample_categories": [
+        "Accommodation",
+        "Attraction",
+        "Event",
+        "Hire",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "DISASSIST",
+          "label": "Actively welcomes people with access needs.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Transport"
+          ]
+        },
+        {
+          "code": "DISTASSIST",
+          "label": "Disabled access available, contact operator for details.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "NOASSIST",
+          "label": "Does not cater for people with access needs.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Transport"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "ACCREDITN",
+      "description": "Accreditation",
+      "attribute_count": 14,
+      "sample_categories": [
+        "Accommodation",
+        "Event",
+        "Hire",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "ACINHOST",
+          "label": "ATEC Accessible &amp; Inclusive Host",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire"
+          ]
+        },
+        {
+          "code": "ATAP",
+          "label": "Quality Tourism Accreditation",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Event",
+            "Hire",
+            "Tour"
+          ]
+        },
+        {
+          "code": "ATECDR",
+          "label": "ATEC Domestic Ready",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire"
+          ]
+        },
+        {
+          "code": "ATECTTR",
+          "label": "ATEC Tourism Trade Ready",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Tour"
+          ]
+        },
+        {
+          "code": "ATICTERC",
+          "label": "Tourism Emission Reduction Commitment",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "AUSORGANIC",
+          "label": "Australian Certified Organic",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BOA",
+          "label": "State/Territory Bus Operators Accreditation",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "CASA",
+          "label": "Civil Aviation Safety Authority",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "ECOTOUR",
+          "label": "ECO Certified (Ecotourism) by Ecotourism Australia",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "HACCP",
+          "label": "HACCP Food Safety Certification",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "INDIAHOST",
+          "label": "ATEC India Host",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire"
+          ]
+        },
+        {
+          "code": "INTREADY",
+          "label": "International Ready Accreditation",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "NATTOUR",
+          "label": "ECO Certified (Nature Tourism) by Ecotourism Australia",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "SUSTAINABLE",
+          "label": "Sustainable Tourism Accreditation by ATIC",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event",
+            "Hire",
+            "Tour"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "ACTIVITY",
+      "description": "Activities",
+      "attribute_count": 16,
+      "sample_categories": [
+        "Attraction",
+        "Hire",
+        "Journey",
+        "Restaurant",
+        "Tour"
+      ],
+      "attributes": [
+        {
+          "code": "4WD",
+          "label": "Four Wheel Driving",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "BIKEMOUNT",
+          "label": "Mountain Biking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Journey"
+          ]
+        },
+        {
+          "code": "BIRDWATCH",
+          "label": "Birdwatching",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "BOAT",
+          "label": "Boating",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "CAMP",
+          "label": "Camping",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "CANOE",
+          "label": "Canoeing/Kayaking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "CYCLE",
+          "label": "Cycling",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Hire"
+          ]
+        },
+        {
+          "code": "FISH",
+          "label": "Fishing",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "SAIL",
+          "label": "Sailing",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey"
+          ]
+        },
+        {
+          "code": "SCENICDRIVES",
+          "label": "Scenic Drives",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "SURF",
+          "label": "Surfing",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "SWIM",
+          "label": "Swimming",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "WALK",
+          "label": "Walks",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "WALKHIKE",
+          "label": "Hiking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Journey"
+          ]
+        },
+        {
+          "code": "WINE",
+          "label": "Wine",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "WINETASTE",
+          "label": "Wine tasting",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "ALTWINESTYLES",
+      "description": "Alternative Wine Styles",
+      "attribute_count": 2,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "ORGANICWIN",
+          "label": "Organic Wine",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "SUSTPROD",
+          "label": "Sustainably Produced Wine",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "BYOLICENCE",
+      "description": "Licensing",
+      "attribute_count": 2,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "NOBYO",
+          "label": "Fully licensed",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "NOLIC",
+          "label": "Not licensed",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "CUISINE",
+      "description": "Cuisine type",
+      "attribute_count": 40,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "AUSTRALIAN",
+          "label": "Australian",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BAR",
+          "label": "Bar",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BBQ",
+          "label": "Barbecue",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BEER",
+          "label": "Beer",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BEVERAGE",
+          "label": "Beverage",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BISCAFDEL",
+          "label": "Bistro/Cafe/Deli",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BRUNCH",
+          "label": "Brunch",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "CHEESE",
+          "label": "Cheese / Charcuterie / Platters",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "CHOCOLATE",
+          "label": "Chocolate",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "CIDER",
+          "label": "Cider",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "CLASSICAUS",
+          "label": "Classic Australian",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "COCKTAILS",
+          "label": "Cocktails",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "COFFEE",
+          "label": "Coffee",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "COFFEEROASTERS",
+          "label": "Coffee Roasters",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "DESSERT",
+          "label": "Dessert",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "GLUTEFREE",
+          "label": "Gluten Free Available",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "HAMBURGERS",
+          "label": "Hamburgers",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "HEALTHY",
+          "label": "Healthy Food",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "LIGHTMEAL",
+          "label": "Light Meals",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "LIQUEUR",
+          "label": "Liqueur",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "MEXICAN",
+          "label": "Mexican",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "MODASIAN",
+          "label": "Modern Asian",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "MODAUS",
+          "label": "Modern Australian",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "PATISSERIE",
+          "label": "Bakery/Patisserie",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "PIZZA",
+          "label": "Pizza or Wood fired Pizza",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "PUB",
+          "label": "Pub",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "SEAFOOD",
+          "label": "Seafood",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "SEASONALPROD",
+          "label": "Seasonal Local Produce",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "SHARE",
+          "label": "Share Plates",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "SLOWFOOD",
+          "label": "Slow Food",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "SPANISH",
+          "label": "Spanish",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "STEAK",
+          "label": "Steak",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "TAPAS",
+          "label": "Tapas",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "THAI",
+          "label": "Thai",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "VEGAN",
+          "label": "Vegan",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "VEGETARIAN",
+          "label": "Vegetarian",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "VIETNAMESE",
+          "label": "Vietnamese",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "WINE",
+          "label": "Wine",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "WINEBAR",
+          "label": "Wine Bar",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "WOODCOOK",
+          "label": "Woodfired Cooking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "DISASSIST",
+      "description": "Actively welcomes people with access needs.",
+      "attribute_count": 9,
+      "sample_categories": [
+        "Accommodation",
+        "Attraction",
+        "Event",
+        "Hire",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "ACCESSINCLSTMNT",
+          "label": "An access and inclusion statement is available (make this available on your website).",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire"
+          ]
+        },
+        {
+          "code": "ALERGYINTOLRNCE",
+          "label": "Caters for people with allergies and intolerances.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "AMBULANT",
+          "label": "Caters for people with sufficient mobility to climb a few steps but who would benefit from fixtures to aid balance. (This includes people using walking frames and mobility aids)",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Transport"
+          ]
+        },
+        {
+          "code": "COMMUNICATION",
+          "label": "Welcomes and assists people who have challenges with learning, communication, understanding and behaviour. (includes people with autism, intellectual disability, Down syndrome, acquired brain injury (ABI), dyslexia and dementia)",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Transport"
+          ]
+        },
+        {
+          "code": "DISTASSIST",
+          "label": "Disabled access available, contact operator for details.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "HEARIMPAIR",
+          "label": "Caters for people who are deaf or have hearing loss.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Hire",
+            "Transport"
+          ]
+        },
+        {
+          "code": "HIGHSUPPORT",
+          "label": "Caters for people with high support needs who travel with a support person.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Hire",
+            "Transport"
+          ]
+        },
+        {
+          "code": "VISIONIMPAIR",
+          "label": "Caters for people who are blind or have vision loss.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Transport"
+          ]
+        },
+        {
+          "code": "WHEELCHAIR",
+          "label": "Caters for people who use a wheelchair.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Transport"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "DIST UNIT",
+      "description": "Distance units",
+      "attribute_count": 1,
+      "sample_categories": [
+        "Journey"
+      ],
+      "attributes": [
+        {
+          "code": "KMS",
+          "label": "Kilometres",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "ENTITY FAC",
+      "description": "Entity Facility",
+      "attribute_count": 45,
+      "sample_categories": [
+        "Accommodation",
+        "Attraction",
+        "Event",
+        "Hire",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "BAR",
+          "label": "Bar",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BBQ",
+          "label": "Barbeque",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "BOATRAMP",
+          "label": "Boat Ramp",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "BUSINESSFC",
+          "label": "Business Facilities",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "CAFE",
+          "label": "Cafe",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event"
+          ]
+        },
+        {
+          "code": "CARPARK",
+          "label": "Carpark",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Tour"
+          ]
+        },
+        {
+          "code": "CELLARDOOR",
+          "label": "Cellar Door",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "COACHPARK",
+          "label": "Coach Parking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "CONVFAC",
+          "label": "Conference/Convention Facilities",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event"
+          ]
+        },
+        {
+          "code": "COOKSCHOOL",
+          "label": "Cooking School",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "DELIVER",
+          "label": "Delivery available",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "DRIVETHROUGH",
+          "label": "Drive through sites available",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "ENQUIRY",
+          "label": "Enquiry Desk",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "ENTERTAIN",
+          "label": "Entertainment",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "FAMLYFREND",
+          "label": "Family Friendly",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "FOOD",
+          "label": "Food and Refreshments",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "FUNCTIONS",
+          "label": "Suitable for Functions",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "GALLERYMUS",
+          "label": "Gallery / Museum",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "GAMESROOM",
+          "label": "Games or recreation room",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction"
+          ]
+        },
+        {
+          "code": "KIOSK",
+          "label": "Kiosk",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event"
+          ]
+        },
+        {
+          "code": "LAUNDRY",
+          "label": "Laundry",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "LAWNGARDEN",
+          "label": "Lawn / Gardens",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "LIVEENT",
+          "label": "Live Music",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "LOOKOUT",
+          "label": "Lookouts",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "NSMOKESTAB",
+          "label": "Non Smoking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Restaurant",
+            "Transport"
+          ]
+        },
+        {
+          "code": "ONLINEORDER",
+          "label": "Online Orders",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "OPENFIRE",
+          "label": "Open Fireplace",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "OUTDOOR",
+          "label": "Outdoor Furniture",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "OUTDOORDIN",
+          "label": "Outdoor Dining Area",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "PARENTROOM",
+          "label": "Parents Room",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event"
+          ]
+        },
+        {
+          "code": "PETALLOW",
+          "label": "Pet Friendly - Enquire",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Transport"
+          ]
+        },
+        {
+          "code": "PICNIC",
+          "label": "Picnic Area",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "PLAYGROUN",
+          "label": "Playground",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "PUBLICTEL",
+          "label": "Public Telephone",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction"
+          ]
+        },
+        {
+          "code": "PUBTOILATT",
+          "label": "Public Toilet",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event"
+          ]
+        },
+        {
+          "code": "PVTDINING",
+          "label": "Private Dining Area",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "RESTAURANT",
+          "label": "Restaurant",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event"
+          ]
+        },
+        {
+          "code": "SAUNA",
+          "label": "Spa/Sauna",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "SECUREPARK",
+          "label": "Secure Parking",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "SHOP",
+          "label": "Shop / Gift Shop",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "STEREORADIO",
+          "label": "Radio/Stereo",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        },
+        {
+          "code": "TAKEAWAY",
+          "label": "Takeaway Available",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "VECHCHARGE",
+          "label": "Electric Vehicle Charging Point",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Event",
+            "Hire"
+          ]
+        },
+        {
+          "code": "WATERSIDE",
+          "label": "Waterside Dining",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "WINETASTE",
+          "label": "Wine Tasting",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "INDIGENOUS",
+      "description": "Indigenous Culture",
+      "attribute_count": 2,
+      "sample_categories": [
+        "Tour"
+      ],
+      "attributes": [
+        {
+          "code": "EXPERIENCE",
+          "label": "Indigenous experiences and/or cultural immersion",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "THEMES",
+          "label": "Indigenous themes and/or interpretation",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "INTERNET",
+      "description": "Internet Access Point",
+      "attribute_count": 3,
+      "sample_categories": [
+        "Accommodation",
+        "Attraction",
+        "Event",
+        "Hire",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "FREEWIFI",
+          "label": "Free Wifi",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Restaurant",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "INTERNETBB",
+          "label": "Broadband Internet Access",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Hire",
+            "Tour"
+          ]
+        },
+        {
+          "code": "PAIDWIFI",
+          "label": "Paid Wifi",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Tour"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "INTNLREACH",
+      "description": "International Reach",
+      "attribute_count": 1,
+      "sample_categories": [
+        "Event"
+      ],
+      "attributes": [
+        {
+          "code": "STATE",
+          "label": "State",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "MEALTYPES",
+      "description": "Meal types",
+      "attribute_count": 4,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "BREAKFAST",
+          "label": "Breakfast",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "DINNER",
+          "label": "Dinner",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "LATEDINE",
+          "label": "Late night",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "LUNCH",
+          "label": "Lunch",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "MEMBERSHIP",
+      "description": "Membership",
+      "attribute_count": 10,
+      "sample_categories": [
+        "Accommodation",
+        "Attraction",
+        "Event",
+        "Hire",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "AGLTA",
+          "label": "Gay and Lesbian Tourism Australia (GALTA)",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event"
+          ]
+        },
+        {
+          "code": "ATEC",
+          "label": "Australian Tourism Export Council",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Restaurant",
+            "Tour"
+          ]
+        },
+        {
+          "code": "NATRUST",
+          "label": "National Trust",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event"
+          ]
+        },
+        {
+          "code": "NSWBC",
+          "label": "New South Wales Business Chamber",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "QTIC",
+          "label": "Queensland Tourism Industry Council",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "RTO",
+          "label": "Regional Tourist/Tourism Association/Organisation",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Hire",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "TICSA",
+          "label": "Tourism Industry Council of SA",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Event",
+            "Tour"
+          ]
+        },
+        {
+          "code": "VIC",
+          "label": "Visitor Information Centre",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "VTIC",
+          "label": "Victoria Tourism Industry Council",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant",
+            "Tour"
+          ]
+        },
+        {
+          "code": "WAITOCASSOC",
+          "label": "WAITOC Associates",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "REST PRICE",
+      "description": "Price range",
+      "attribute_count": 4,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "BTW20AND30",
+          "label": "Between $20 and $30",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "NOTSPECIFIED",
+          "label": "Not Specified",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "OVER30",
+          "label": "Over $30",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "UNDER20",
+          "label": "Under $20",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "STARRATING",
+      "description": "Star Ratings",
+      "attribute_count": 1,
+      "sample_categories": [
+        "Accommodation"
+      ],
+      "attributes": [
+        {
+          "code": "4",
+          "label": "4 Stars",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "TAG",
+      "description": "Tags",
+      "attribute_count": 17,
+      "sample_categories": [
+        "Accommodation",
+        "Attraction",
+        "Event",
+        "Hire",
+        "Journey",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "AboriginalCulture",
+          "label": "Aboriginal Culture",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "Adventure",
+          "label": "Adventure",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Hire",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "AgriTourism",
+          "label": "Agri Tourism",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Tour"
+          ]
+        },
+        {
+          "code": "Art&Culture",
+          "label": "Art & Culture",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Journey"
+          ]
+        },
+        {
+          "code": "Beaches&Surf",
+          "label": "Beaches & Surf",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "Experienceischarged",
+          "label": "Experience is charged",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "Experienceisfree",
+          "label": "Experience is free",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Journey"
+          ]
+        },
+        {
+          "code": "Family",
+          "label": "Family",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Event",
+            "Hire",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "Food&Wine",
+          "label": "Food & Wine",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Attraction",
+            "Journey",
+            "Restaurant",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "History&Heritage",
+          "label": "History & Heritage",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event",
+            "Journey",
+            "Tour"
+          ]
+        },
+        {
+          "code": "LGBTQI",
+          "label": "LGBTQI",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event"
+          ]
+        },
+        {
+          "code": "Nature&Wildlife",
+          "label": "Nature & Wildlife",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Journey",
+            "Tour",
+            "Transport"
+          ]
+        },
+        {
+          "code": "SignatureExperiences",
+          "label": "Signature Experiences",
+          "data_type": "bool",
+          "sample_categories": [
+            "Accommodation",
+            "Tour"
+          ]
+        },
+        {
+          "code": "Spa&Wellbeing",
+          "label": "Spa & Wellbeing",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey"
+          ]
+        },
+        {
+          "code": "Sports",
+          "label": "Sports",
+          "data_type": "bool",
+          "sample_categories": [
+            "Attraction",
+            "Event"
+          ]
+        },
+        {
+          "code": "WineAustralia",
+          "label": "Wine Australia",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "YouthOperators",
+          "label": "Youth Operators",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "TIME UNIT",
+      "description": "Time units",
+      "attribute_count": 1,
+      "sample_categories": [
+        "Journey"
+      ],
+      "attributes": [
+        {
+          "code": "HRS",
+          "label": "Hours",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "TOURISMORG",
+      "description": "Tourism Organisation",
+      "attribute_count": 13,
+      "sample_categories": [
+        "Event",
+        "Hire",
+        "Journey",
+        "Restaurant",
+        "Tour",
+        "Transport"
+      ],
+      "attributes": [
+        {
+          "code": "LTODCTC",
+          "label": "Discovery Coast Tourism &amp; Commerce Inc.",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOACC",
+          "label": "WA - Australia&#x27;s Coral Coast",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOAGO",
+          "label": "WA - Australia&#x27;s Golden Outback",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOANWT",
+          "label": "WA - Australia&#x27;s North West Tourism",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire"
+          ]
+        },
+        {
+          "code": "RTOBNBT",
+          "label": "QLD - Bundaberg North Burnett Tourism",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOCT",
+          "label": "QLD - Capricorn Tourism",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOEP",
+          "label": "WA - Destination Perth",
+          "data_type": "bool",
+          "sample_categories": [
+            "Hire",
+            "Transport"
+          ]
+        },
+        {
+          "code": "RTOFC",
+          "label": "QLD - Fraser Coast Tourism and Events",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOGT",
+          "label": "QLD - Gladstone Area Promotion and Development Limited",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RTOMTP",
+          "label": "SA - Murraylands Tourism Partnership",
+          "data_type": "bool",
+          "sample_categories": [
+            "Event"
+          ]
+        },
+        {
+          "code": "RTOOQT",
+          "label": "QLD - Outback Queensland Tourism",
+          "data_type": "bool",
+          "sample_categories": [
+            "Journey"
+          ]
+        },
+        {
+          "code": "RTOQMRT",
+          "label": "NSW - Mudgee Region Tourism",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "RTOTSC",
+          "label": "QLD - Visit Sunshine Coast",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant",
+            "Tour"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "WINE PRICE",
+      "description": "Wine Price",
+      "attribute_count": 3,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "BTW0AND20",
+          "label": "Between $0 and $20",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "BTW20AND40",
+          "label": "Between $20 and $40",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "OVER40",
+          "label": "Over $40",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "WINEMAKE",
+      "description": "Winemaking / Viticultural Practices",
+      "attribute_count": 3,
+      "sample_categories": [
+        "Restaurant"
+      ],
+      "attributes": [
+        {
+          "code": "ESTATEGROW",
+          "label": "Estate Grown",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "FAMILYRUN",
+          "label": "Family Run",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        },
+        {
+          "code": "HANDPICK",
+          "label": "Hand-picked",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "WINEORG",
+      "description": "Wine Organisation",
+      "attribute_count": 2,
+      "sample_categories": [
+        "Restaurant",
+        "Tour"
+      ],
+      "attributes": [
+        {
+          "code": "RWOBWGA",
+          "label": "SA - Barossa Grape & Wine Association",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "RWOMWGGA",
+          "label": "NSW - Mudgee Wine Association",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "type_code": "WINEREGIONS",
+      "description": "Wine Regions",
+      "attribute_count": 2,
+      "sample_categories": [
+        "Restaurant",
+        "Tour"
+      ],
+      "attributes": [
+        {
+          "code": "BARZNE",
+          "label": "Barossa (zone)",
+          "data_type": "bool",
+          "sample_categories": [
+            "Tour"
+          ]
+        },
+        {
+          "code": "MUDGEE",
+          "label": "Mudgee",
+          "data_type": "bool",
+          "sample_categories": [
+            "Restaurant"
+          ]
+        }
+      ]
+    }
+  ]
+}

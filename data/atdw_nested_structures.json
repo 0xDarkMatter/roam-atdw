@@ -1,0 +1,41 @@
+{
+  "status": 0,
+  "numberOfResults": 1160,
+  "queryTime": 0,
+  "products": [
+    {
+      "productId": "66187b0790424110620a5ee8",
+      "productName": "&Sando",
+      "productClassifications": [
+        "CAFE"
+      ],
+      "comms_em": "info@comparistorante.com.au",
+      "comms_url": "https://www.comparistorante.com.au/",
+      "comms_ph": "0497930293",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=66187b0790424110620a5ee8&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "63230a8b40c4aa3553c64ed1",
+      "productName": "11e Cave",
+      "productClassifications": [
+        "BAR"
+      ],
+      "comms_url": "https://www.onzieme.com.au",
+      "comms_ph": "0424894763",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=63230a8b40c4aa3553c64ed1&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "5d16e4d961a23a846fa23f27",
+      "productName": "16th Stromlo Running Festival",
+      "productClassifications": [
+        "EVTCOMNTY",
+        "SPORT"
+      ],
+      "comms_em": "info@stromlo.com.au",
+      "comms_url": "www.stromlo.com.au",
+      "comms_ph": "0404155239",
+      "comms_burl": "https://raceroster.com/events/2025/100955/srf2025",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=5d16e4d961a23a846fa23f27&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    }
+  ]
+}

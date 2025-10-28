@@ -1,0 +1,1636 @@
+{
+  "status": 0,
+  "numberOfResults": 415,
+  "queryTime": 2,
+  "products": [
+    {
+      "productId": "5d16e4d961a23a846fa23f27",
+      "productName": "16th Stromlo Running Festival",
+      "productClassifications": [
+        "EVTCOMNTY",
+        "SPORT"
+      ],
+      "comms_url": "www.stromlo.com.au",
+      "nextOccurrence": "2025-11-15",
+      "eventFrequency": [
+        {
+          "frequencyStartDate": "2025-11-15",
+          "frequencyEndDate": "2025-11-15",
+          "frequencyStartTime": "05:50",
+          "frequencyEndTime": "10:30",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-16",
+          "frequencyEndDate": "2025-11-16",
+          "frequencyStartTime": "05:50",
+          "frequencyEndTime": "10:30",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        }
+      ],
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=5d16e4d961a23a846fa23f27&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "68e709394e9d11c01dc3d475",
+      "productName": "40 x 40 Anniversary Exhibition and Auction",
+      "productClassifications": [
+        "EXHIBIT"
+      ],
+      "comms_url": "https://www.m16artspace.com.au/2025-exhibitions/40-x-40",
+      "nextOccurrence": "2025-11-02",
+      "eventFrequency": [
+        {
+          "frequencyStartDate": "2025-11-02",
+          "frequencyEndDate": "2025-11-02",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-05",
+          "frequencyEndDate": "2025-11-05",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-06",
+          "frequencyEndDate": "2025-11-06",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-07",
+          "frequencyEndDate": "2025-11-07",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-08",
+          "frequencyEndDate": "2025-11-08",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-09",
+          "frequencyEndDate": "2025-11-09",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-12",
+          "frequencyEndDate": "2025-11-12",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-13",
+          "frequencyEndDate": "2025-11-13",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-14",
+          "frequencyEndDate": "2025-11-14",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-15",
+          "frequencyEndDate": "2025-11-15",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-16",
+          "frequencyEndDate": "2025-11-16",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-19",
+          "frequencyEndDate": "2025-11-19",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-20",
+          "frequencyEndDate": "2025-11-20",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-21",
+          "frequencyEndDate": "2025-11-21",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-22",
+          "frequencyEndDate": "2025-11-22",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-23",
+          "frequencyEndDate": "2025-11-23",
+          "frequencyStartTime": "12:00",
+          "frequencyEndTime": "17:00",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        }
+      ],
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=68e709394e9d11c01dc3d475&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "68ba3b899960b6fc0bdc8b28",
+      "productName": "50 Years on the Beat: The Legacy of Constable Kenny Koala",
+      "productClassifications": [
+        "EXHIBIT"
+      ],
+      "comms_url": "https://www.nca.gov.au/events/50-years-on-beat-legacy-constable-kenny-koala",
+      "nextOccurrence": "2025-10-26",
+      "eventFrequency": [
+        {
+          "frequencyStartDate": "2025-09-19",
+          "frequencyEndDate": "2025-09-19",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-20",
+          "frequencyEndDate": "2025-09-20",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-21",
+          "frequencyEndDate": "2025-09-21",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-22",
+          "frequencyEndDate": "2025-09-22",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-23",
+          "frequencyEndDate": "2025-09-23",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-24",
+          "frequencyEndDate": "2025-09-24",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-25",
+          "frequencyEndDate": "2025-09-25",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-26",
+          "frequencyEndDate": "2025-09-26",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-27",
+          "frequencyEndDate": "2025-09-27",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-28",
+          "frequencyEndDate": "2025-09-28",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-29",
+          "frequencyEndDate": "2025-09-29",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-09-30",
+          "frequencyEndDate": "2025-09-30",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-01",
+          "frequencyEndDate": "2025-10-01",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-02",
+          "frequencyEndDate": "2025-10-02",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-03",
+          "frequencyEndDate": "2025-10-03",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-04",
+          "frequencyEndDate": "2025-10-04",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-05",
+          "frequencyEndDate": "2025-10-05",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-06",
+          "frequencyEndDate": "2025-10-06",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-07",
+          "frequencyEndDate": "2025-10-07",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-08",
+          "frequencyEndDate": "2025-10-08",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-09",
+          "frequencyEndDate": "2025-10-09",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-10",
+          "frequencyEndDate": "2025-10-10",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-11",
+          "frequencyEndDate": "2025-10-11",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-12",
+          "frequencyEndDate": "2025-10-12",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-13",
+          "frequencyEndDate": "2025-10-13",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-14",
+          "frequencyEndDate": "2025-10-14",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-15",
+          "frequencyEndDate": "2025-10-15",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-16",
+          "frequencyEndDate": "2025-10-16",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-17",
+          "frequencyEndDate": "2025-10-17",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-18",
+          "frequencyEndDate": "2025-10-18",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-19",
+          "frequencyEndDate": "2025-10-19",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-20",
+          "frequencyEndDate": "2025-10-20",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-21",
+          "frequencyEndDate": "2025-10-21",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-22",
+          "frequencyEndDate": "2025-10-22",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-23",
+          "frequencyEndDate": "2025-10-23",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-24",
+          "frequencyEndDate": "2025-10-24",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-25",
+          "frequencyEndDate": "2025-10-25",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-26",
+          "frequencyEndDate": "2025-10-26",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-27",
+          "frequencyEndDate": "2025-10-27",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-28",
+          "frequencyEndDate": "2025-10-28",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-29",
+          "frequencyEndDate": "2025-10-29",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-30",
+          "frequencyEndDate": "2025-10-30",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-10-31",
+          "frequencyEndDate": "2025-10-31",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-01",
+          "frequencyEndDate": "2025-11-01",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-02",
+          "frequencyEndDate": "2025-11-02",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-03",
+          "frequencyEndDate": "2025-11-03",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-04",
+          "frequencyEndDate": "2025-11-04",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-05",
+          "frequencyEndDate": "2025-11-05",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-06",
+          "frequencyEndDate": "2025-11-06",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-07",
+          "frequencyEndDate": "2025-11-07",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-08",
+          "frequencyEndDate": "2025-11-08",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-09",
+          "frequencyEndDate": "2025-11-09",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-10",
+          "frequencyEndDate": "2025-11-10",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-11",
+          "frequencyEndDate": "2025-11-11",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-12",
+          "frequencyEndDate": "2025-11-12",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-13",
+          "frequencyEndDate": "2025-11-13",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-14",
+          "frequencyEndDate": "2025-11-14",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-15",
+          "frequencyEndDate": "2025-11-15",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-16",
+          "frequencyEndDate": "2025-11-16",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-17",
+          "frequencyEndDate": "2025-11-17",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-18",
+          "frequencyEndDate": "2025-11-18",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-19",
+          "frequencyEndDate": "2025-11-19",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-20",
+          "frequencyEndDate": "2025-11-20",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-21",
+          "frequencyEndDate": "2025-11-21",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-22",
+          "frequencyEndDate": "2025-11-22",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-23",
+          "frequencyEndDate": "2025-11-23",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-24",
+          "frequencyEndDate": "2025-11-24",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-25",
+          "frequencyEndDate": "2025-11-25",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-26",
+          "frequencyEndDate": "2025-11-26",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-27",
+          "frequencyEndDate": "2025-11-27",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-28",
+          "frequencyEndDate": "2025-11-28",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-29",
+          "frequencyEndDate": "2025-11-29",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-11-30",
+          "frequencyEndDate": "2025-11-30",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-01",
+          "frequencyEndDate": "2025-12-01",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-02",
+          "frequencyEndDate": "2025-12-02",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-03",
+          "frequencyEndDate": "2025-12-03",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-04",
+          "frequencyEndDate": "2025-12-04",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-05",
+          "frequencyEndDate": "2025-12-05",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-06",
+          "frequencyEndDate": "2025-12-06",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-07",
+          "frequencyEndDate": "2025-12-07",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-08",
+          "frequencyEndDate": "2025-12-08",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-09",
+          "frequencyEndDate": "2025-12-09",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-10",
+          "frequencyEndDate": "2025-12-10",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-11",
+          "frequencyEndDate": "2025-12-11",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-12",
+          "frequencyEndDate": "2025-12-12",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-13",
+          "frequencyEndDate": "2025-12-13",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-14",
+          "frequencyEndDate": "2025-12-14",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-15",
+          "frequencyEndDate": "2025-12-15",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-16",
+          "frequencyEndDate": "2025-12-16",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-17",
+          "frequencyEndDate": "2025-12-17",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-18",
+          "frequencyEndDate": "2025-12-18",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-19",
+          "frequencyEndDate": "2025-12-19",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-20",
+          "frequencyEndDate": "2025-12-20",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-21",
+          "frequencyEndDate": "2025-12-21",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-22",
+          "frequencyEndDate": "2025-12-22",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-23",
+          "frequencyEndDate": "2025-12-23",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-24",
+          "frequencyEndDate": "2025-12-24",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-25",
+          "frequencyEndDate": "2025-12-25",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-26",
+          "frequencyEndDate": "2025-12-26",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-27",
+          "frequencyEndDate": "2025-12-27",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-28",
+          "frequencyEndDate": "2025-12-28",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-29",
+          "frequencyEndDate": "2025-12-29",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-30",
+          "frequencyEndDate": "2025-12-30",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2025-12-31",
+          "frequencyEndDate": "2025-12-31",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-01",
+          "frequencyEndDate": "2026-01-01",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-02",
+          "frequencyEndDate": "2026-01-02",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-03",
+          "frequencyEndDate": "2026-01-03",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-04",
+          "frequencyEndDate": "2026-01-04",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-05",
+          "frequencyEndDate": "2026-01-05",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-06",
+          "frequencyEndDate": "2026-01-06",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-07",
+          "frequencyEndDate": "2026-01-07",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-08",
+          "frequencyEndDate": "2026-01-08",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-09",
+          "frequencyEndDate": "2026-01-09",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-10",
+          "frequencyEndDate": "2026-01-10",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-11",
+          "frequencyEndDate": "2026-01-11",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-12",
+          "frequencyEndDate": "2026-01-12",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-13",
+          "frequencyEndDate": "2026-01-13",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-14",
+          "frequencyEndDate": "2026-01-14",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-15",
+          "frequencyEndDate": "2026-01-15",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-16",
+          "frequencyEndDate": "2026-01-16",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-17",
+          "frequencyEndDate": "2026-01-17",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-18",
+          "frequencyEndDate": "2026-01-18",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-19",
+          "frequencyEndDate": "2026-01-19",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-20",
+          "frequencyEndDate": "2026-01-20",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-21",
+          "frequencyEndDate": "2026-01-21",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-22",
+          "frequencyEndDate": "2026-01-22",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-23",
+          "frequencyEndDate": "2026-01-23",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-24",
+          "frequencyEndDate": "2026-01-24",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-25",
+          "frequencyEndDate": "2026-01-25",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-26",
+          "frequencyEndDate": "2026-01-26",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-27",
+          "frequencyEndDate": "2026-01-27",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-28",
+          "frequencyEndDate": "2026-01-28",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-29",
+          "frequencyEndDate": "2026-01-29",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-30",
+          "frequencyEndDate": "2026-01-30",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-01-31",
+          "frequencyEndDate": "2026-01-31",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-01",
+          "frequencyEndDate": "2026-02-01",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-02",
+          "frequencyEndDate": "2026-02-02",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-03",
+          "frequencyEndDate": "2026-02-03",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-04",
+          "frequencyEndDate": "2026-02-04",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-05",
+          "frequencyEndDate": "2026-02-05",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-06",
+          "frequencyEndDate": "2026-02-06",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-07",
+          "frequencyEndDate": "2026-02-07",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-08",
+          "frequencyEndDate": "2026-02-08",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-09",
+          "frequencyEndDate": "2026-02-09",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-10",
+          "frequencyEndDate": "2026-02-10",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-11",
+          "frequencyEndDate": "2026-02-11",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-12",
+          "frequencyEndDate": "2026-02-12",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-13",
+          "frequencyEndDate": "2026-02-13",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-14",
+          "frequencyEndDate": "2026-02-14",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-15",
+          "frequencyEndDate": "2026-02-15",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-16",
+          "frequencyEndDate": "2026-02-16",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-17",
+          "frequencyEndDate": "2026-02-17",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-18",
+          "frequencyEndDate": "2026-02-18",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-19",
+          "frequencyEndDate": "2026-02-19",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-20",
+          "frequencyEndDate": "2026-02-20",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-21",
+          "frequencyEndDate": "2026-02-21",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-22",
+          "frequencyEndDate": "2026-02-22",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-23",
+          "frequencyEndDate": "2026-02-23",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-24",
+          "frequencyEndDate": "2026-02-24",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-25",
+          "frequencyEndDate": "2026-02-25",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-26",
+          "frequencyEndDate": "2026-02-26",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-27",
+          "frequencyEndDate": "2026-02-27",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-02-28",
+          "frequencyEndDate": "2026-02-28",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-01",
+          "frequencyEndDate": "2026-03-01",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-02",
+          "frequencyEndDate": "2026-03-02",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-03",
+          "frequencyEndDate": "2026-03-03",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-04",
+          "frequencyEndDate": "2026-03-04",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-05",
+          "frequencyEndDate": "2026-03-05",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-06",
+          "frequencyEndDate": "2026-03-06",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-07",
+          "frequencyEndDate": "2026-03-07",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-08",
+          "frequencyEndDate": "2026-03-08",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-09",
+          "frequencyEndDate": "2026-03-09",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-10",
+          "frequencyEndDate": "2026-03-10",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-11",
+          "frequencyEndDate": "2026-03-11",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-12",
+          "frequencyEndDate": "2026-03-12",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-13",
+          "frequencyEndDate": "2026-03-13",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-14",
+          "frequencyEndDate": "2026-03-14",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-15",
+          "frequencyEndDate": "2026-03-15",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-16",
+          "frequencyEndDate": "2026-03-16",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-17",
+          "frequencyEndDate": "2026-03-17",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        },
+        {
+          "frequencyStartDate": "2026-03-18",
+          "frequencyEndDate": "2026-03-18",
+          "frequencyStartTime": "",
+          "frequencyEndTime": "",
+          "attributeIdEventStatus": "CONFIRMED",
+          "attributeIdEventStatusDescription": "Confirmed Event"
+        }
+      ],
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=68ba3b899960b6fc0bdc8b28&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    }
+  ]
+}

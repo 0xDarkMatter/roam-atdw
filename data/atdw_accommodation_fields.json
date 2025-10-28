@@ -1,0 +1,69 @@
+{
+  "status": 0,
+  "numberOfResults": 84,
+  "queryTime": 3,
+  "products": [
+    {
+      "productId": "5fd017c6dad46f254f08fb78",
+      "productName": "A by Adina Canberra",
+      "rateFrom": 200,
+      "rateTo": 350,
+      "numberOfRooms": 130,
+      "boundary": "-35.2829336,149.1309267",
+      "comms_em": "reservations.canberra@abyadina.com",
+      "comms_url": "https://abyadina.com/en/luxury-hotels/canberra/?utm_source=atdw&utm_medium=affiliate&utm_campaign=atdw_absy&utm_content=atdw_listing",
+      "comms_ph": "0251346444",
+      "comms_sh": "138642",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=5fd017c6dad46f254f08fb78&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "5fa1ea38a445f6ea54d931ce",
+      "productName": "Abode Belconnen",
+      "rateFrom": 128,
+      "rateTo": 448,
+      "numberOfRooms": 152,
+      "boundary": "-35.2401875,149.0719814",
+      "comms_em": "reservations@abodehotels.com.au",
+      "comms_url": "https://abodehotels.com.au/",
+      "comms_ph": "1300122633",
+      "comms_sh": "0262200355",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=5fa1ea38a445f6ea54d931ce&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "5bb70729c4767b085c5a3463",
+      "productName": "Abode Kingston",
+      "rateFrom": 150,
+      "rateTo": 400,
+      "numberOfRooms": 63,
+      "boundary": "-35.3171129,149.1410962",
+      "comms_em": "reservations@abodehotels.com.au",
+      "comms_url": "https://abodehotels.com.au/",
+      "comms_ph": "1300122633",
+      "comms_sh": "1300122633",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=5bb70729c4767b085c5a3463&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "57be42622b7f451112d99aea",
+      "productName": "Abode Narrabundah",
+      "rateFrom": 159,
+      "rateTo": 400,
+      "numberOfRooms": 86,
+      "boundary": "-35.34120621173333,149.15438474854886",
+      "comms_em": "reservations@abodehotels.com.au",
+      "comms_url": "http://abodehotels.com.au/hotels/narrabundah/",
+      "comms_ph": "1300122633",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=57be42622b7f451112d99aea&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    },
+    {
+      "productId": "65fa2b363b04ee4c386f9358",
+      "productName": "Abode Phillip",
+      "rateFrom": 100,
+      "rateTo": 600,
+      "numberOfRooms": 52,
+      "boundary": "-35.3412488,149.083757",
+      "comms_em": "reservations@abodehotels.com.au",
+      "comms_url": "https://abodehotels.com.au/hotels/phillip/",
+      "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=65fa2b363b04ee4c386f9358&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+    }
+  ]
+}

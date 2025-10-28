@@ -1,0 +1,35 @@
+{
+  "productId": "62cecfcd70c53e2a537aec82",
+  "productNumber": "AU0918893",
+  "status": "ACTIVE",
+  "productUpdateDate": "2025-05-30T22:09:37.539+10:00",
+  "owningOrganisationId": "62cecf0941be72e93fb54b1d",
+  "owningOrganisationNumber": "OR0049190",
+  "owningOrganisationName": "BUSHLAND HIDEAWAY",
+  "productName": "'Bushland Hideaway on the River'",
+  "atdwExpiryDate": "2026-05-30",
+  "productDescription": "Nestled along the tranquil Dumaresq River on the QLD/NSW border, Bushland Hideaway offers the perfect rural escape. With one kilometre of river frontage, it's ideal for couples, families, groups, or solo travellers to relax and reconnect with nature.\n\nSpacious grassy campsites sit under magnificent gum and oak trees, shared with native wildlife and birdsong. All sites are easily accessible for RVs, caravans, and vehicles. Enjoy sunny days, clear night skies, and peaceful riverside views.\n\nAdventurers can fish, swim, kayak, or explore nearby walking and cycling trails. Free kayaks are provided (indemnity form required). Bring your camera and fishing rod —wildlife and natural beauty abound.\n\n'Bushland Hideaway' is perfectly situated at the heart of popular tourist destinations, including Inglewood, Texas, Yelarbon, and Goondiwindi. While enjoying the peace and tranquillity of the Hideaway, you'll also have the opportunity to venture out on easy day trips to explore the unique attractions of the Goondiwindi Region.\n\nAfter a day of discovering local gems, return to the calm of Bushland Hideaway where you can unwind , sit by the crackling campfire, gaze up at the star-filled sky, and let the stillness of the bushland soothe your soul.—an ideal way to end a fulfilling day of adventure.",
+  "productCategoryId": "ACCOMM",
+  "productImage": "https://assets.atdw-online.com.au/images/b5bfdc442e549e2e349517c3ca1ff4ba.jpeg?rect=422%2C0%2C3152%2C2364&w=280&h=210&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjYyY2VjZmNkNzBjNTNlMmE1MzdhZWM4MiIsImRpc3RyaWJ1dG9ySWQiOiI2ODhiM2M0NmM2ZWZjYmQ1MWRkMmZiNTYiLCJhcGlrZXlJZCI6IjY4OGIzYzQ2YzZlZmNiZDUxZGQyZmI1OSJ9",
+  "boundary": "0,0",
+  "addresses": [
+    {
+      "address_type": "PHYSICAL",
+      "address_line": "3271 Texas Yelarbon Road",
+      "address_line2": "",
+      "city": "Yelarbon",
+      "state": "QLD",
+      "postcode": "4388",
+      "country": "Australia",
+      "area": [
+        "Goondiwindi Area"
+      ],
+      "region": [
+        "Queensland Country Tourism",
+        "Western Downs Region"
+      ]
+    }
+  ],
+  "score": 1,
+  "productPixelURL": "https://atlas.atdw-online.com.au/pixel?productId=62cecfcd70c53e2a537aec82&distributorId=688b3c46c6efcbd51dd2fb56&language=en&syndicationMethod=API"
+}

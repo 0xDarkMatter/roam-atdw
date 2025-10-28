@@ -81,26 +81,85 @@ ATDW/
 ├── src/
 │   └── atdw/
 │       ├── __init__.py
-│       └── client.py       # Main ATDW client
+│       └── client.py                    # Main ATDW API client
 ├── tests/
-│   ├── test_atdw_unit.py
-│   └── test_atdw_integration.py
-├── scripts/
-│   └── test_atdw.py       # Example usage script
+│   ├── test_atdw_unit.py               # Unit tests
+│   └── test_atdw_integration.py        # Integration tests
+├── scripts/                             # 28 utility scripts
+│   ├── load_atdw_to_database.py        # Database loader with V2 schema
+│   ├── extract_atdw_national.py        # National extraction script
+│   ├── extract_atdw_attributes.py      # Attribute extraction
+│   ├── extract_byron_atdw.py           # Byron Bay extraction
+│   ├── analyze_atdw_extraction.py      # Analysis tools
+│   ├── test_atdw*.py                   # Various test scripts
+│   └── ...                              # 20+ more scripts
+├── migrations/
+│   ├── 009_atdw_tourism_schema.sql     # ATDW V1 schema
+│   └── 010_atdw_schema_v2_fixed.sql    # ATDW V2 schema
 ├── data/
-│   └── atdw_default_fields.json
-├── docs/
+│   ├── atdw_default_fields.json        # Default field definitions
+│   ├── atdw_attribute_catalog.json     # Attribute catalog
+│   ├── atdw_extensive_fields.json      # Extended field definitions
+│   ├── atdw_product_detail_example.json # Product examples
+│   ├── byron_bay_atdw_*.csv            # Byron Bay extracts
+│   └── atdw_national/                   # National extracts (9 CSV files)
+│       ├── atdw_australia_complete_*.csv
+│       ├── atdw_vic_*.csv
+│       └── ...                          # State-by-state CSVs
+├── docs/                                # 7 documentation files
 │   ├── ATDW_ATTRIBUTE_QUICK_REFERENCE.md
-│   └── ATDW_DATABASE_SCHEMA.md
+│   ├── ATDW_DATABASE_SCHEMA.md
+│   ├── ATDW_ATTRIBUTE_CATALOG.md
+│   ├── ATDW_EXTRACTION_READY.md
+│   ├── ATDW_NATIONAL_EXTRACTION_PLAN.md
+│   ├── ATDW_SCHEMA_V2.md
+│   └── ATDW_V2_DEPLOYMENT_STATUS.md
 ├── requirements.txt
 └── README.md
 ```
+
+## Database Setup
+
+The project includes PostgreSQL schema migrations for storing ATDW data:
+
+```bash
+# Apply the ATDW V2 schema
+psql -d your_database -f migrations/010_atdw_schema_v2_fixed.sql
+
+# Load ATDW data into database
+python scripts/load_atdw_to_database.py --state VIC --yes
+```
+
+See `docs/ATDW_DATABASE_SCHEMA.md` for detailed schema documentation.
+
+## Scripts
+
+The `scripts/` directory contains 28+ utility scripts for various ATDW operations:
+
+**Data Extraction:**
+- `extract_atdw_national.py` - Extract all Australian tourism products by state
+- `extract_atdw_attributes.py` - Extract and analyze product attributes
+- `extract_byron_atdw.py` - Extract Byron Bay tourism data
+
+**Database Loading:**
+- `load_atdw_to_database.py` - Load ATDW data into PostgreSQL with V2 schema
+
+**Testing & Analysis:**
+- `test_atdw*.py` - Various API testing scripts (pagination, fields, categories, etc.)
+- `analyze_atdw_extraction.py` - Analyze extraction results
+- `compare_atdw_extractions.py` - Compare different extractions
+- `debug_atdw_*.py` - Debug tools for fields and product structure
 
 ## Testing
 
 Run tests with pytest:
 ```bash
 pytest tests/
+```
+
+Run a specific test script:
+```bash
+python scripts/test_atdw.py
 ```
 
 ## Rate Limiting

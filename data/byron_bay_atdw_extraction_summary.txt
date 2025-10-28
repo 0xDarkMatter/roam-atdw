@@ -1,0 +1,114 @@
+Byron Bay ATDW Extraction - Complete with Contact Fields
+==========================================================
+
+Extraction Date: 2025-10-25 20:40:11
+API Key: ee37502ebe584551a7eeb42bf2e26450
+Location: -28.6450, 153.6050 (Byron Bay, NSW)
+Radius: 15km
+Page Size: 1000
+
+RESULTS
+-------
+Total Products: 322
+API Calls: 1 (all results fit in single page)
+Fetch Time: 0.7 seconds
+Output File: byron_bay_atdw_complete_20251025_204011.csv
+File Size: 0.61 MB
+
+CONTACT DATA COMPLETENESS
+--------------------------
+Phone Numbers:  291 / 322 (90.4%)
+Email Addresses: 293 / 322 (91.0%)
+Websites:       321 / 322 (99.7%)
+Booking URLs:   215 / 322 (66.8%)
+
+FIELDS REQUESTED
+----------------
+The following 18 fields were requested via the `fields` parameter:
+
+Core Product Fields:
+  - product_id
+  - product_number
+  - product_name
+  - product_category
+  - product_description
+  - product_image
+  - status
+
+Location Fields:
+  - address
+  - boundary
+
+Contact Fields (NEW):
+  - comms_ph     (Phone)
+  - comms_em     (Email)
+  - comms_url    (Website)
+  - comms_burl   (Booking URL)
+
+Additional Fields:
+  - rate_from
+  - rate_to
+  - starrating
+  - number_of_rooms
+  - next_occurrence
+
+COMPARISON WITH PREVIOUS EXTRACTION
+------------------------------------
+Previous extraction (byron_bay_atdw_20251025_202901.csv):
+  - 322 products
+  - 21 fields
+  - NO contact fields
+
+New extraction (byron_bay_atdw_complete_20251025_204011.csv):
+  - 322 products
+  - 22 fields
+  - 4 contact fields added (phone, email, website, booking URL)
+
+IMPROVEMENTS
+------------
++ 291 phone numbers added (90.4% coverage)
++ 293 email addresses added (91.0% coverage)
++ 321 websites added (99.7% coverage)
++ 215 booking URLs added (66.8% coverage)
+
+API EFFICIENCY
+--------------
+- Single API call fetched all 322 results (page_size=1000 is sufficient)
+- No pagination required
+- Fast response time (0.7 seconds)
+- Minimal API quota usage
+
+SAMPLE RECORDS
+--------------
+The Villas of Byron
+  Phone: 0266856746
+  Email: escape@thevillasofbyron.com.au
+  Website: http://thevillasofbyron.com.au/
+  Booking: https://www.byronbeachabodes.com.au/book-your-stay/
+
+Vision Walks Eco Tours
+  Phone: 0488800160
+  Email: ecotours@visionwalks.com.au
+  Website: http://www.visionwalks.com.au
+  Booking: https://www.visionwalks.com.au/tours
+
+Byron Bay Surf School
+  Phone: 0466644888
+  Email: info@byronbaysurfschool.com.au
+  Website: http://www.byronbaysurfschool.com.au
+  Booking: https://www.byronbaysurfschool.com.au/book-now
+
+KEY FINDINGS
+------------
+1. ATDW has excellent contact data coverage (90%+ for phone/email/website)
+2. Website coverage is near-perfect (99.7%)
+3. Booking URL coverage is lower (66.8%) - not all businesses use direct booking
+4. Single API call is highly efficient for regional extractions
+5. Contact fields must be explicitly requested via `fields` parameter
+
+NEXT STEPS
+----------
+- Use this dataset for contact enrichment in FATHOM platform
+- Compare ATDW contact data with Google/Foursquare/TripAdvisor
+- Consider ATDW as primary source for verified business contact info
+- Implement delta endpoint for incremental updates
